@@ -1,8 +1,8 @@
 {
   "family": "1.25-dev",
-  "release": "1.25.12-dev-20261109.7",
-  "go": "1.25.12",
-  "digest": "sha256:579c12f18ec474639b0a541bab0957ca4b4692593e0880c951d4ee8736666945",
+  "release": "1.25.14-dev-20261109.9",
+  "go": "1.25.14",
+  "digest": "sha256:642d25cc44f5dec74eae2eb0179b71c4f68bd9b570a967dbe242a0b998ad674d",
   "stig": {
     "x86_64": {
       "counts": {
@@ -26,16 +26,16 @@
   "vulnerabilities": {
     "x86_64": {
       "Critical": 1,
-      "High": 14,
-      "Medium": 8,
+      "High": 10,
+      "Medium": 5,
       "Low": 1,
       "Negligible": 0,
       "Unknown": 0
     },
     "aarch64": {
       "Critical": 1,
-      "High": 14,
-      "Medium": 8,
+      "High": 10,
+      "Medium": 5,
       "Low": 1,
       "Negligible": 0,
       "Unknown": 0
@@ -53,12 +53,12 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 281706875,
-      "installed": 766730213
+      "compressed": 281711874,
+      "installed": 766828509
     },
     "aarch64": {
-      "compressed": 263954838,
-      "installed": 819636471
+      "compressed": 263905203,
+      "installed": 819771631
     }
   },
   "key_packages": [
@@ -68,7 +68,7 @@
     "git 2.56.0-r3",
     "glibc-2.44 2.44-r14",
     "glibc-2.44-dev 2.44-r14",
-    "go-1.25-upstream 1.25.12-r0",
+    "go-1.25-upstream 1.25.14-r0",
     "libstdc++ 16.2.0-r2",
     "libstdc++-dev 16.2.0-r2",
     "make 4.4.1-r15",
