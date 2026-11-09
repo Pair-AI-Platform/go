@@ -1,8 +1,8 @@
 {
   "family": "1.26",
-  "release": "1.26.10-20261109.11",
+  "release": "1.26.10-20261109.13",
   "go": "1.26.10",
-  "digest": "sha256:39b1f0bac8f8c0c2104bc05aa4aa2c16bcc7b93a212fa136147ff584be1eb9ed",
+  "digest": "sha256:fe21a38e02e44682d520a39a4c6e93533faf0e1d15444ba3973a4853151fa7f6",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,11 +53,11 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 88149867,
+      "compressed": 88149864,
       "installed": 258182680
     },
     "aarch64": {
-      "compressed": 82855223,
+      "compressed": 82855220,
       "installed": 253573700
     }
   },
