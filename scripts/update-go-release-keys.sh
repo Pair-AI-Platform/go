@@ -14,3 +14,4 @@ trap 'rm -rf "$tmpd"' EXIT
 curl -fsSL --retry 3 https://dl.google.com/linux/linux_signing_key.pub | gpg --homedir "$tmpd" --import -q
 cp "$tmpd/pubring.kbx" "$keyring"
 echo "Refreshed Go release keys at $keyring"
+

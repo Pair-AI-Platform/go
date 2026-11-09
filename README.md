@@ -20,7 +20,7 @@ chosen per application and per contract, and are provided separately: see [Crypt
 
 | Area | Aligned with | Evidence in every release |
 | :--- | :--- | :--- |
-| **Hardening** | OpenSCAP profile derived from the DISA General Purpose Operating System SRG (not an official DISA STIG for containers) | Rules passed out of the applicable ones (about 94% on `go:1.27`), the full report, a signed attestation; see [Security scans](#security-scans) |
+| **Hardening** | OpenSCAP profile derived from the DISA General Purpose Operating System SRG (not an official DISA STIG for containers) | Rules passed out of the applicable ones (about 94% on `go:1.25`), the full report, a signed attestation; see [Security scans](#security-scans) |
 | **🇸🇦 Saudi Arabia** | NCA ECC-2:2024 1-6-2-2, 1-6-3-2, 1-6-3-5, 2-1, 2-2-3-3, 2-10-3 · NCA CCC-2:2024 2-3-P-1-3, 2-3-P-1-7, 2-9-T-1-1, 4-1-P-1-2 · NCA CSCC-1:2019 2-3-1-1, 2-3-1-7 · SAMA CSF 3.3.8, 3.3.17 | Minimal non-root baseline, STIG and vulnerability results, SBOM, signatures, provenance |
 | **🇰🇼 Kuwait** | CBK CORF 5.3.1.2–5.3.1.5 (hardening against recognized benchmarks), 5.8.1.3 (SBOM), 5.13 (vulnerability and patch management) · NCSC NBCC PR-1, ID-2 | Same, plus rebuilds every two hours |
 | **🇦🇪 UAE** | UAE IA Regulation v1.1 T3.2.1, T5.5.4, T7.5.1, T7.7.1, T7.8.1 (superseded by the IA Standard v2.x, 2025; mapping to v2 follows) | Same; the scans use the SCAP formats (XCCDF, OVAL, CVE, CVSS) T7.7 names |
@@ -46,25 +46,22 @@ architectures, plus what changed.
 
 | Image | Go line | Hardening profile (x86_64) | Vulnerabilities | SBOM | Size | Newest release |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `go:1.27` · `latest` | Current stable | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-stig.json)](https://pair-ai-platform.github.io/go/images/1.27.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-vulns.json)](https://pair-ai-platform.github.io/go/images/1.27.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-sbom.json)](https://pair-ai-platform.github.io/go/images/1.27.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-release.json)](https://pair-ai-platform.github.io/go/images/1.27.html) |
-| `go:1.27-dev` · `latest-dev` | Current stable (CGO) | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-dev-stig.json)](https://pair-ai-platform.github.io/go/images/1.27-dev.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-dev-vulns.json)](https://pair-ai-platform.github.io/go/images/1.27-dev.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-dev-sbom.json)](https://pair-ai-platform.github.io/go/images/1.27-dev.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-dev-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.27-dev-release.json)](https://pair-ai-platform.github.io/go/images/1.27-dev.html) |
-| `go:1.26` | Previous stable | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-stig.json)](https://pair-ai-platform.github.io/go/images/1.26.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-vulns.json)](https://pair-ai-platform.github.io/go/images/1.26.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-sbom.json)](https://pair-ai-platform.github.io/go/images/1.26.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-release.json)](https://pair-ai-platform.github.io/go/images/1.26.html) |
-| `go:1.26-dev` | Previous stable (CGO) | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-dev-stig.json)](https://pair-ai-platform.github.io/go/images/1.26-dev.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-dev-vulns.json)](https://pair-ai-platform.github.io/go/images/1.26-dev.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-dev-sbom.json)](https://pair-ai-platform.github.io/go/images/1.26-dev.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-dev-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.26-dev-release.json)](https://pair-ai-platform.github.io/go/images/1.26-dev.html) |
-| `go:1.25` | Extended maintenance | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-stig.json)](https://pair-ai-platform.github.io/go/images/1.25.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-vulns.json)](https://pair-ai-platform.github.io/go/images/1.25.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-sbom.json)](https://pair-ai-platform.github.io/go/images/1.25.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-release.json)](https://pair-ai-platform.github.io/go/images/1.25.html) |
-| `go:1.25-dev` | Extended maintenance (CGO) | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-stig.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-vulns.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-sbom.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-release.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html) |
+| `go:1.25` · `latest` | LTS runtime | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-stig.json)](https://pair-ai-platform.github.io/go/images/1.25.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-vulns.json)](https://pair-ai-platform.github.io/go/images/1.25.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-sbom.json)](https://pair-ai-platform.github.io/go/images/1.25.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-release.json)](https://pair-ai-platform.github.io/go/images/1.25.html) |
+| `go:1.25-dev` · `latest-dev` | LTS development (CGO) | [![GPOS SRG profile](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-stig.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html#stig) | [![CVEs](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-vulns.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html#vulnerabilities) | [![SBOM](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-sbom.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html#sbom) | ![size](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-size.json) | [![release](https://img.shields.io/endpoint?url=https://pair-ai-platform.github.io/go/badges/1.25-dev-release.json)](https://pair-ai-platform.github.io/go/images/1.25-dev.html) |
 
-Go 1.26 and 1.27 come from the public Wolfi repository (`packages.wolfi.dev`). Go 1.25 comes from the
-official `go.dev` binaries, signature-verified and packaged locally via Melange, because Wolfi moved
-non-latest Go versions to Chainguard's commercial repository; see [Where Go comes from](docs/GO-SOURCES.md).
+Go 1.25 is our designated LTS runtime line. Because Chainguard moved Go 1.25 to its commercial/enterprise
+repository, the public Wolfi repository has no maintained packages for it. We build our images equivalent
+to Chainguard's Go images directly from the official `go.dev` binaries, cryptographically verified with
+Google's Linux Packages Signing Authority PGP key and SHA-256 checksums; see [Where Go comes from](docs/GO-SOURCES.md).
 
 | Flavor | Contents |
 | :--- | :--- |
-| runtime (`go:1.27`) | Go compiler and toolchain, git, bash, busybox, CA certificates, and time zones. Runs as `nonroot` (1000:1000) in `/app`. Minimal attack surface without C compiler tooling. |
-| development (`go:1.27-dev`) | The standard runtime plus `build-base` (GCC, G++, make, binutils), `pkgconf`, Python 3, and OpenSSH client for CGO compilation and native C library dependencies. |
+| runtime (`go:1.25`) | Go compiler and toolchain, git, bash, busybox, CA certificates, and time zones. Runs as `nonroot` (1000:1000) in `/app`. Minimal attack surface without C compiler tooling. |
+| development (`go:1.25-dev`) | The standard runtime plus `build-base` (GCC, G++, make, binutils), `pkgconf`, Python 3, and OpenSSH client for CGO compilation and native C library dependencies. |
 
 ```dockerfile
 # Multi-stage build example
-FROM ghcr.io/pair-ai-platform/go:1.27-dev AS build
+FROM ghcr.io/pair-ai-platform/go:1.25-dev AS build
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
@@ -72,12 +69,12 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -o /app/server ./cmd/server
 
 # Ship on minimal runtime or distroless
-FROM ghcr.io/pair-ai-platform/go:1.27
+FROM ghcr.io/pair-ai-platform/go:1.25
 COPY --from=build /app/server /app/server
 ENTRYPOINT ["/app/server"]
 ```
 
-The default entrypoint is `/usr/bin/go`. Running `docker run ghcr.io/pair-ai-platform/go:1.27 version`
+The default entrypoint is `/usr/bin/go`. Running `docker run ghcr.io/pair-ai-platform/go:1.25 version`
 executes `go version`. For shell interaction, override entrypoint with `--entrypoint bash`.
 
 ---
@@ -86,20 +83,20 @@ executes `go version`. For shell interaction, override entrypoint with `--entryp
 
 | Tag | Example | Moves? |
 | :--- | :--- | :--- |
-| Release | `1.27.3-20261109.1`, `1.27.3-dev-20261109.1` | Never. One per published version, with its own [GitHub release](../../releases) |
-| Patch | `1.27.3`, `1.27.3-dev` | To the newest release of that Go patch release |
-| Minor and major | `1.27`, `1.27-dev` | To the newest release of that line |
-| `latest`, `latest-dev` | | To the newest release of the Current stable line (1.27) |
+| Release | `1.25.12-20261109.1`, `1.25.12-dev-20261109.1` | Never. One per published version, with its own [GitHub release](../../releases) |
+| Patch | `1.25.12`, `1.25.12-dev` | To the newest release of that Go patch release |
+| Minor and major | `1.25`, `1.25-dev` | To the newest release of that line |
+| `latest`, `latest-dev` | | To the newest release of the LTS line (1.25) |
 
 Every run takes each image through these steps; a version exists for users only after the last one:
 
 | Step | What happens | If it fails |
 | :--- | :--- | :--- |
 | 1. Build and test | apko builds the image natively on x86_64 and aarch64; functional, compiler, CGO, hardening-profile and vulnerability scans run on each | Nothing is published |
-| 2. Compare | Both architectures are built together; each must be byte for byte the image tested in step 1. If the result equals the image under the floating tag (`1.27`), nothing changed and the run stops here for that image | Nothing is published |
+| 2. Compare | Both architectures are built together; each must be byte for byte the image tested in step 1. If the result equals the image under the floating tag (`1.25`), nothing changed and the run stops here for that image | Nothing is published |
 | 3. Publish by digest | The image is pushed to GHCR without any tag | Untagged, invisible to users; the cleanup deletes it |
 | 4. Sign, attest, verify | Sigstore signatures; SBOM, hardening-profile, vulnerability and SLSA provenance attestations; all verified | Still untagged |
-| 5. Tag | The release tag (`1.27.3-20261109.1`) and the floating tags move to the new digest | A re-run of the failed job tags it |
+| 5. Tag | The release tag (`1.25.12-20261109.1`) and the floating tags move to the new digest | A re-run of the failed job tags it |
 | 6. Release | A GitHub release with the changes, the scan results, the SBOMs and the OpenSCAP report, created only if the tag exists on that digest; the badges are updated | A re-run of the failed job creates it |
 | 7. Keep ten | The ten newest versions of each image stay, in GHCR and as GitHub releases | Never fails a release; runs again next time |
 
@@ -109,7 +106,7 @@ Every run takes each image through these steps; a version exists for users only 
 - **Release tags never move and never point to an image without its evidence.** Floating tags
   always point to a kept, signed version.
 - **Retention: ten versions per image.** GHCR and the GitHub releases keep the ten newest versions
-  of each image (`1.25`, `1.25-dev`, `1.26`, `1.27`, …).
+  of each image (`1.25`, `1.25-dev`).
 - **The evidence outlives the image.** For every version ever published, release records, SBOMs and
   OpenSCAP reports are preserved in GitHub Pages archive and Rekor.
 
@@ -125,7 +122,7 @@ publishes in the `chainguard-security-guide` package (Apache-2.0): the `xccdf_ba
 profile of `ssg-chainguard-gpos-ds.xml`, which is based on the DISA General Purpose Operating System
 SRG. The scanner is built from the Wolfi packages `openscap` and `chainguard-security-guide`.
 
-A typical run on `go:1.27` passes over 93% of applicable rules. The rules that do not pass,
+A typical run on `go:1.25` passes over 93% of applicable rules. The rules that do not pass,
 and why:
 
 | Rule | Why it does not pass | Where it is handled |
@@ -163,7 +160,7 @@ On both architectures, before anything is published:
 | SLSA v1 build provenance | the index | `gh attestation verify` |
 
 ```sh
-IMAGE=ghcr.io/pair-ai-platform/go:1.27
+IMAGE=ghcr.io/pair-ai-platform/go:1.25
 WORKFLOW=Pair-AI-Platform/go/.github/workflows/build.yml
 
 cosign verify "$IMAGE" \
@@ -251,7 +248,7 @@ oras discover --format tree "$IMAGE"
 
 | What | How |
 | :--- | :--- |
-| Packages inside images (`go-1.27`, `go-1.26`, glibc, ...) | Not pinned. Every hour, `wolfi-watch.yml` resolves which Wolfi versions each image would get; as soon as anything changes, it starts the release. The build every two hours stays as a safety net |
+| Packages inside images (glibc, git, ca-certificates, ...) | Not pinned. Every hour, `wolfi-watch.yml` resolves which Wolfi versions each image would get; as soon as anything changes, it starts the release. The build every two hours stays as a safety net |
 | apko, OpenSCAP and Grype images, oras, cosign, GitHub Actions | Pinned by digest or version. [Renovate](renovate.json) opens a pull request, automerged once tests pass |
 | Go 1.25 (official go.dev binaries) | Renovate tracks go.dev releases; pull requests automerge after images build and test ([details](docs/GO-SOURCES.md)) |
 | A new Go line | Add `apko/go-<version>.apko.yaml` and `-dev.apko.yaml` |
@@ -263,5 +260,5 @@ Needs Docker, curl and cosign. Tools come from their GitHub releases, verified.
 ```sh
 scripts/install-tools.sh ./bin apko
 ./bin/apko build scanner/stig-scanner.apko.yaml stig-scanner:local scanner.tar --arch x86_64
-./bin/apko build apko/go-1.27.apko.yaml test:1.27 image.tar --arch x86_64
+./bin/apko build apko/go-1.25.apko.yaml test:1.25 image.tar --arch x86_64
 ```

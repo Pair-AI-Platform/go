@@ -13,7 +13,7 @@ import re
 import sys
 
 # The runtime and dev images of this line also get `latest` and `latest-dev`
-LATEST_VERSION = "1.27"
+LATEST_VERSION = "1.25"
 
 image = sys.argv[1]
 
@@ -41,3 +41,4 @@ for config in sorted(pathlib.Path("apko").glob("go-*.apko.yaml")):
         "local": any(re.search(rf"^\s+- {re.escape(p)}(=|$)", config.read_text(), re.M) for p in local_packages),
     })
 print(json.dumps(entries))
+

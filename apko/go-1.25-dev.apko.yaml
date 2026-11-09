@@ -60,9 +60,10 @@ environment:
   SSL_CERT_FILE: /etc/ssl/certs/ca-certificates.crt
 
 annotations:
-  org.opencontainers.image.title: Go 1.25 (development)
-  org.opencontainers.image.description: Go 1.25 on Wolfi with build-base (gcc, make), pkgconf, git and CGO toolchain. Non-root.
+  org.opencontainers.image.title: Go 1.25 (LTS Development)
+  org.opencontainers.image.description: Go 1.25 LTS on Wolfi with build-base (gcc, make), pkgconf, git and CGO toolchain. Non-root.
 
 archs:
   - x86_64
   - aarch64
+

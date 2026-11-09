@@ -19,3 +19,4 @@
   publishes an image only when its digest changed.
 - The images contain Go only. Cryptography profiles (FIPS 140-3, national TLS policies) are
   applied per application and contract from https://github.com/Pair-AI-Platform/khatm.
+
