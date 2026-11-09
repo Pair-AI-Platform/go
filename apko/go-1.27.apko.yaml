@@ -10,7 +10,7 @@ contents:
     - wolfi-baselayout
     - ca-certificates-bundle
     - tzdata
-    - go-1.27
+    - go-1.27-upstream
     - git
     - busybox
     - bash

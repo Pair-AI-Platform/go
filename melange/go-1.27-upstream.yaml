@@ -1,0 +1,95 @@
+# Go 1.27 from the official binaries published by the Go project on go.dev / dl.google.com,
+# packaged for the images in apko/.
+#
+# The build downloads nothing it does not verify:
+#   - the tarball is checked with gpgv against the Google Go Linux Packages Signing Authority
+#     key in go-1.27-upstream/go-release-keys.kbx (key EB4C1BFD4F042F6DDDCCEC917721F63BD38B4796);
+#   - the SHA-256 checksum is checked against the official sha256 stamp from Google.
+# Renovate updates the version from go.dev, and scripts/update-go-release-keys.sh refreshes
+# the keyring if Google rotates signing subkeys.
+package:
+  name: go-1.27-upstream
+  # renovate: datasource=golang-version depName=golang versioning=semver
+  version: "1.27.3"
+  epoch: 0
+  description: "Go 1.27, official binaries from go.dev, signature and checksum verified"
+  url: https://go.dev
+  copyright:
+    - license: BSD-3-Clause
+  target-architecture:
+    - x86_64
+    - aarch64
+  options:
+    no-depends: true
+  dependencies:
+    provides:
+      - go=${{package.full-version}}
+      - go-1.27=${{package.full-version}}
+    provider-priority: 100
+
+environment:
+  contents:
+    keyring:
+      - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+    repositories:
+      - https://packages.wolfi.dev/os
+    packages:
+      - busybox
+      - ca-certificates-bundle
+      - curl
+      - gpgv
+
+pipeline:
+  - name: Download and verify
+    runs: |
+      case "${{build.arch}}" in
+        x86_64) arch=amd64 ;;
+        aarch64) arch=arm64 ;;
+        *) echo "unsupported architecture ${{build.arch}}" >&2; exit 1 ;;
+      esac
+      base="https://dl.google.com/go"
+      tarball="go${{package.version}}.linux-$arch.tar.gz"
+      curl -fsSL --retry 3 -o "$tarball" "$base/$tarball"
+      curl -fsSL --retry 3 -o "$tarball.asc" "$base/$tarball.asc"
+      curl -fsSL --retry 3 -o "$tarball.sha256" "$base/$tarball.sha256"
+
+      # The download must be signed by the Google Go release key
+      gpgv --keyring ./go-release-keys.kbx "$tarball.asc" "$tarball"
+
+      # Check against the official SHA-256 checksum
+      echo "$(cat "$tarball.sha256")  $tarball" | sha256sum -c -
+
+      tar -xzf "$tarball"
+
+  - name: Install
+    runs: |
+      mkdir -p "${{targets.destdir}}/usr/bin"
+      mkdir -p "${{targets.destdir}}/usr/lib/go"
+      mkdir -p "${{targets.destdir}}/usr/share/licenses/${{package.name}}"
+
+      cp -a go/bin go/pkg go/src go/lib "${{targets.destdir}}/usr/lib/go/"
+      # Remove internal testdata to avoid shipping test ELF binaries and save space
+      find "${{targets.destdir}}/usr/lib/go/src" -type d -name "testdata" -prune -exec rm -rf {} +
+      ln -s /usr/lib/go/bin/go "${{targets.destdir}}/usr/bin/go"
+      ln -s /usr/lib/go/bin/gofmt "${{targets.destdir}}/usr/bin/gofmt"
+      install -Dm644 go/LICENSE "${{targets.destdir}}/usr/share/licenses/${{package.name}}/LICENSE"
+
+test:
+  environment:
+    contents:
+      keyring:
+        - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+      repositories:
+        - https://packages.wolfi.dev/os
+      packages:
+        - busybox
+  pipeline:
+    - name: The packaged version runs
+      runs: |
+        /usr/bin/go version
+        test "$(/usr/bin/go version | awk '{print $3}')" = "go${{package.version}}"
+        /usr/bin/gofmt --help || true
+
+update:
+  enabled: false
+  exclude-reason: "Renovate tracks the version (renovate.json)"

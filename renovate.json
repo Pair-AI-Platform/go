@@ -87,6 +87,38 @@
       ]
     },
     {
+      "description": "Go 1.27 from go.dev: newest 1.27.x patch release as soon as released (security releases included), automerged once the images build, test and scan",
+      "matchFileNames": [
+        "melange/go-1.27-upstream.yaml"
+      ],
+      "matchDepNames": [
+        "golang"
+      ],
+      "allowedVersions": "^1\\.27\\.",
+      "groupName": "go 1.27 upstream",
+      "automerge": true,
+      "labels": [
+        "dependencies",
+        "golang"
+      ]
+    },
+    {
+      "description": "Go 1.26 from go.dev: newest 1.26.x patch release as soon as released (security releases included), automerged once the images build, test and scan",
+      "matchFileNames": [
+        "melange/go-1.26-upstream.yaml"
+      ],
+      "matchDepNames": [
+        "golang"
+      ],
+      "allowedVersions": "^1\\.26\\.",
+      "groupName": "go 1.26 upstream",
+      "automerge": true,
+      "labels": [
+        "dependencies",
+        "golang"
+      ]
+    },
+    {
       "description": "Go 1.25 from go.dev: newest 1.25.x patch release as soon as released (security releases included), automerged once the images build, test and scan",
       "matchFileNames": [
         "melange/go-1.25-upstream.yaml"
