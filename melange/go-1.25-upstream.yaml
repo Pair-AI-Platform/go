@@ -12,7 +12,7 @@
 package:
   name: go-1.25-upstream
   # renovate: datasource=golang-version depName=golang versioning=semver
-  version: "1.25.12"
+  version: "1.25.14"
   epoch: 0
   description: "Go 1.25, official binaries from go.dev, signature and checksum verified"
   url: https://go.dev
