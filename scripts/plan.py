@@ -13,7 +13,7 @@ import re
 import sys
 
 # The runtime and dev images of this line also get `latest` and `latest-dev`
-LATEST_VERSION = "1.25"
+LATEST_VERSION = "1.27"
 
 image = sys.argv[1]
 

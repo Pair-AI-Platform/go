@@ -26,7 +26,7 @@ import shutil
 import sys
 
 ARCHES = ["x86_64", "aarch64"]
-# Shown in the release notes as the main components of each image
+# Shown in the release notes as the main components of each image (name prefixes)
 KEY_PREFIXES = ("go-", "glibc-", "openssl-", "ca-certificates", "libstdc++", "git", "binutils", "gcc", "make")
 SEVERITIES = ["Critical", "High", "Medium", "Low", "Negligible", "Unknown"]
 
@@ -102,82 +102,135 @@ def notes(rec):
     for arch in ARCHES:
         scan = rec["scans"][arch]
         out.append(f"| {arch} | {scan['sbom']['packages']} | {mb(scan['size']['compressed'])} | {mb(scan['size']['installed'])} |")
-    out += ["", "Main components: " + ", ".join(f"`{p}`" for p in rec["key_packages"]) + "."]
-    out += ["", "### Hardening and security", "",
-            "| Architecture | DISA GPOS SRG profile | Vulnerabilities (Grype) |",
-            "| :--- | :--- | :--- |"]
+    out += ["", "Main components: " + ", ".join(f"`{p}`" for p in rec["key_packages"]) + ".",
+            "The SPDX SBOMs are attached to this release and to each image as signed attestations."]
+    out += ["", "### Scans", "",
+            "| Architecture | Hardening profile, DISA GPOS SRG (applicable rules passed) | Not applicable | Vulnerabilities (C / H / M / L) |",
+            "| :--- | :--- | :--- | :--- |"]
     for arch in ARCHES:
-        scan = rec["scans"][arch]
-        st = scan["stig"]
-        vu = scan["vulnerabilities"]
-        out.append(f"| {arch} | {st['counts'].get('pass', 0)} of {st['applicable']} rules pass ({st['score']}%) | "
-                   f"{vu['total']} total (Critical {vu['counts'].get('Critical', 0)}, High {vu['counts'].get('High', 0)}, "
-                   f"Medium {vu['counts'].get('Medium', 0)}, Low {vu['counts'].get('Low', 0)}) |")
-    out += ["", "The signed release and the evidence files are attached to this release.", ""]
-    return "\n".join(out)
+        stig = rec["scans"][arch]["stig"]
+        vuln = rec["scans"][arch]["vulnerabilities"]["counts"]
+        out.append(
+            f"| {arch} | {stig['counts'].get('pass', 0)} / {stig['applicable']} ({stig['score']}%) "
+            f"| {stig['counts'].get('notapplicable', 0)} "
+            f"| {vuln['Critical']} / {vuln['High']} / {vuln['Medium']} / {vuln['Low']} |"
+        )
+    findings = merged_findings(rec)
+    out += ["", "### Vulnerabilities", ""]
+    if not findings:
+        out.append("None found.")
+    else:
+        out += ["| ID | Severity | Package | Installed | Comes from | Fixed upstream in | Architectures |",
+                "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |"]
+        out += [f"| [{f['id']}]({f['url']}) | {f['severity']} | `{f['package']}` | {f['version']} "
+                f"| `{f.get('source') or f['package']}` | {', '.join(f['fixed_in']) or 'no fix yet'} "
+                f"| {', '.join(f['arches'])} |" for f in findings]
+        out += ["", FIX_NOTE]
+    failed = rec["scans"]["x86_64"]["stig"]["failed"]
+    if failed:
+        out += ["", "Hardening-profile rules not passed (x86_64):", ""]
+        out += [f"- `{f['rule']}`: {f['title']}" for f in failed]
+    out += [
+        "",
+        "### Verify",
+        "",
+        "```sh",
+        f"cosign verify {image}:{release} \\",
+        f"  --certificate-identity-regexp '^https://github.com/{os.environ.get('GITHUB_REPOSITORY', '<repo>')}/.github/workflows/build.yml@' \\",
+        "  --certificate-oidc-issuer https://token.actions.githubusercontent.com",
+        f"gh attestation verify oci://{image}:{release} --repo {os.environ.get('GITHUB_REPOSITORY', '<repo>')}",
+        "```",
+    ]
+    return "\n".join(out) + "\n"
 
 
-def mb(b):
-    return f"{b / 1048576:.1f} MB"
+FIX_NOTE = ("*Comes from* is the Wolfi package that brings the affected code into the image; a library "
+            "bundled inside the toolchain, for example, comes from that package. *Fixed upstream in* is the "
+            "version of the affected code that fixes it; the image gets the fix when the package it comes "
+            "from ships that version, and the next build after that publishes it.")
+
+
+def merged_findings(rec):
+    """The vulnerability findings of both architectures, one row per ID and package."""
+    merged = {}
+    for arch in ARCHES:
+        for f in rec["scans"][arch]["vulnerabilities"].get("findings", []):
+            key = (f["id"], f["package"], f["version"])
+            merged.setdefault(key, {**f, "arches": []})["arches"].append(arch)
+    rank = {s: i for i, s in enumerate(SEVERITIES)}
+    return sorted(merged.values(), key=lambda f: (rank.get(f["severity"], 99), f["id"], f["package"]))
+
+
+def sbom_packages(path):
+    """The apk packages of an apko SPDX SBOM: name, version and declared license, once each."""
+    packages = {}
+    for p in json.loads(pathlib.Path(path).read_text()).get("packages", []):
+        refs = [r.get("referenceLocator", "") for r in p.get("externalRefs", [])]
+        if not any(r.startswith("pkg:apk/") for r in refs):
+            continue
+        key = (p["name"], p.get("versionInfo", ""))
+        license_ = p.get("licenseDeclared") or "NOASSERTION"
+        if key not in packages or packages[key] == "NOASSERTION":
+            packages[key] = license_
+    return [(n, v, l) for (n, v), l in sorted(packages.items())]
+
+
+def mb(size):
+    return f"{size / 1048576:.1f} MB"
 
 
 def badge(label, message, color):
-    return {"schemaVersion": 1, "label": label, "message": str(message), "color": color}
+    return {"schemaVersion": 1, "label": label, "message": message, "color": color}
 
 
 PAGE_STYLE = """
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-       max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #24292f; }
-h1, h2, h3 { line-height: 1.25; margin-top: 24px; margin-bottom: 16px; font-weight: 600; }
-h1 { font-size: 2em; border-bottom: 1px solid #d0d7de; padding-bottom: .3em; }
-h2 { font-size: 1.4em; border-bottom: 1px solid #d0d7de; padding-bottom: .3em; }
-table { border-collapse: collapse; width: 100%; margin-top: 10px; margin-bottom: 20px; }
-th, td { padding: 8px 12px; border: 1px solid #d0d7de; text-align: left; font-size: 14px; }
-th { background-color: #f6f8fa; font-weight: 600; }
-tr:nth-child(even) { background-color: #fcfcfc; }
-code { background-color: #afb8c133; padding: .2em .4em; border-radius: 4px; font-size: 85%; }
-.badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; color: white; }
-.sev-Critical { background-color: #cf222e; }
-.sev-High { background-color: #d4a72c; color: black; }
-.sev-Medium { background-color: #fb8f44; }
-.sev-Low { background-color: #57606a; }
-.sev-Negligible, .sev-Unknown { background-color: #8c959f; }
-.muted { color: #57606a; font-size: 13px; }
+body{font-family:system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#1f2328}
+h1{font-size:1.6rem}h2{margin-top:2rem;border-bottom:1px solid #d0d7de;padding-bottom:.3rem}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0}
+th,td{border:1px solid #d0d7de;padding:.35rem .6rem;text-align:left;vertical-align:top}
+th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-weight:600}
+.Medium{color:#9a6700;font-weight:600}.muted{color:#656d76}
 """
 
 
 def page(rec, record_dir, site):
-    e = html.escape
-    family = rec["family"]
-    rows = [f"<h1><code>{e(rec['image'])}:{e(family)}</code></h1>"]
+    family, e = rec["family"], html.escape
+    rows = []
+    rows.append(f"<h1>{e(rec['image'])}:{e(rec['release'])}</h1>")
     rows.append(f"<p>Go {e(rec['go'])} ({e(rec['flavor'])}). Tags: "
-                + ", ".join(f"<code>{e(t)}</code>" for t in [rec['release']] + rec['floating']) + ".</p>")
-    rows.append(f"<p class=\"muted\">Index digest: <code>{e(rec['digest'])}</code></p>")
-
-    rows.append('<h2 id="vulnerabilities">Vulnerabilities (Grype)</h2>')
-    rows.append('<table><tr><th>Architecture</th><th>Total</th><th>Critical</th><th>High</th>'
-                '<th>Medium</th><th>Low</th></tr>')
+                + ", ".join(f"<code>{e(t)}</code>" for t in [rec['release']] + rec['floating'])
+                + f". Index digest <code>{e(rec['digest'])}</code>.</p>")
+    rows.append('<p><a href="#vulnerabilities">Vulnerabilities</a> · <a href="#sbom">SBOM</a> · '
+                '<a href="#stig">Hardening profile</a></p>')
+    findings = merged_findings(rec)
+    counts = {s: sum(1 for f in findings if f["severity"] == s) for s in SEVERITIES}
+    rows.append('<h2 id="vulnerabilities">Vulnerabilities</h2>')
+    rows.append("<p>" + " · ".join(f"{s}: {n}" for s, n in counts.items() if n) if findings else "<p>None found.")
+    rows.append(' <span class="muted">(Grype)</span></p>')
+    if findings:
+        rows.append("<table><tr><th>ID</th><th>Severity</th><th>Package</th><th>Installed</th>"
+                    "<th>Comes from</th><th>Fixed upstream in</th><th>Architectures</th></tr>")
+        for f in findings:
+            rows.append(f'<tr><td><a href="{e(f["url"])}">{e(f["id"])}</a></td>'
+                        f'<td class="{e(f["severity"])}">{e(f["severity"])}</td><td><code>{e(f["package"])}</code></td>'
+                        f'<td>{e(f["version"])}</td><td><code>{e(f.get("source") or f["package"])}</code></td>'
+                        f'<td>{e(", ".join(f["fixed_in"]) or "no fix yet")}</td>'
+                        f'<td>{e(", ".join(f["arches"]))}</td></tr>')
+        rows.append("</table>")
+        rows.append(f'<p class="muted">{e(FIX_NOTE).replace("*", "")}</p>')
+    rows.append('<h2 id="sbom">SBOM</h2><p>One SPDX SBOM per architecture, also attached to the image as a '
+                'signed attestation.</p>')
     for arch in ARCHES:
-        v = rec["scans"][arch]["vulnerabilities"]["counts"]
-        rows.append(f"<tr><td>{arch}</td><td>{rec['scans'][arch]['vulnerabilities']['total']}</td>"
-                    f"<td><span class=\"badge sev-Critical\">{v.get('Critical', 0)}</span></td>"
-                    f"<td><span class=\"badge sev-High\">{v.get('High', 0)}</span></td>"
-                    f"<td><span class=\"badge sev-Medium\">{v.get('Medium', 0)}</span></td>"
-                    f"<td><span class=\"badge sev-Low\">{v.get('Low', 0)}</span></td></tr>")
-    rows.append("</table>")
-
-    rows.append('<h2 id="sbom">Software Bill of Materials (SBOM)</h2>')
-    rows.append('<table><tr><th>Architecture</th><th>Packages</th><th>SPDX file</th><th>Size (compressed)</th>'
-                '<th>Size (installed)</th></tr>')
-    for arch in ARCHES:
-        sc = rec["scans"][arch]
-        rows.append(f"<tr><td>{arch}</td><td>{sc['sbom']['packages']}</td>"
-                    f'<td><a href="../sbom/{e(family)}/sbom-{arch}.spdx.json">SPDX JSON</a></td>'
-                    f"<td>{mb(sc['size']['compressed'])}</td><td>{mb(sc['size']['installed'])}</td></tr>")
-    rows.append("</table>")
-
-    rows.append('<h2 id="stig">Security Hardening (DISA GPOS SRG)</h2>')
-    rows.append('<p class="muted">Derived from the DISA General Purpose Operating System SRG; not an official '
+        packages = sbom_packages(pathlib.Path(record_dir) / f"sbom-{arch}.spdx.json")
+        size = rec["scans"][arch]["size"]
+        rows.append(f'<h3 id="sbom-{arch}">{arch}: {len(packages)} packages</h3>')
+        rows.append(f'<p><a href="../sbom/{e(family)}/sbom-{arch}.spdx.json">Download sbom-{arch}.spdx.json</a> · '
+                    f'{mb(size["compressed"])} compressed, {mb(size["installed"])} installed</p>')
+        rows.append("<table><tr><th>Package</th><th>Version</th><th>License</th></tr>")
+        rows += [f"<tr><td><code>{e(n)}</code></td><td>{e(v)}</td><td>{e(l)}</td></tr>" for n, v, l in packages]
+        rows.append("</table>")
+    rows.append('<h2 id="stig">Hardening profile (OpenSCAP, DISA GPOS SRG)</h2>'
+                '<p class="muted">Derived from the DISA General Purpose Operating System SRG; not an official '
                 'DISA STIG for containers.</p><table><tr><th>Architecture</th><th>Passed / applicable</th>'
                 '<th>Not applicable</th><th>Report</th></tr>')
     for arch in ARCHES:
@@ -262,4 +315,3 @@ if __name__ == "__main__":
         pages(sys.argv[2], sys.argv[3], archive_release="--no-archive" not in sys.argv[4:])
     else:
         sys.exit(f"unknown command {command}")
-

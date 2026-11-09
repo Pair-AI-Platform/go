@@ -30,37 +30,37 @@
     {
       "customType": "regex",
       "description": "Tool images pinned by tag and digest in the scripts (Grype)",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
+        "/^scripts/[^/]+\\.sh$/"
+      ],
       "matchStrings": [
         "(?<depName>[a-z0-9][a-z0-9._-]*(?:/[a-z0-9][a-z0-9._-]*)+):(?<currentValue>[\\w.-]+)@(?<currentDigest>sha256:[a-f0-9]{64})"
       ],
-      "datasourceTemplate": "docker",
-      "fileMatch": [
-        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
-        "/^scripts/[^/]+\\.sh$/"
-      ]
+      "datasourceTemplate": "docker"
     },
     {
       "customType": "regex",
       "description": "Tool versions annotated with a '# renovate:' comment in the workflows and scripts",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
+        "/^scripts/[^/]+\\.sh$/"
+      ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n\\s*[\\w-]+(?::\\s|=)[\"']?(?<currentValue>[^\"'\\s]+)"
       ],
-      "extractVersionTemplate": "^v?(?<version>.+)$",
-      "fileMatch": [
-        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
-        "/^scripts/[^/]+\\.sh$/"
-      ]
+      "extractVersionTemplate": "^v?(?<version>.+)$"
     },
     {
       "customType": "regex",
-      "description": "Package versions in the melange recipes, annotated with a '# renovate:' comment (Go 1.25 from go.dev)",
+      "description": "Package versions in the melange recipes, annotated with a '# renovate:' comment (Go upstream from go.dev)",
+      "managerFilePatterns": [
+        "/^melange/[^/]+\\.yaml$/"
+      ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+) versioning=(?<versioning>\\S+)\\n\\s+version: \"?(?<currentValue>[^\"\\s]+)\"?"
       ],
-      "versioningTemplate": "{{{versioning}}}",
-      "fileMatch": [
-        "/^melange/[^/]+\\.yaml$/"
-      ]
+      "versioningTemplate": "{{{versioning}}}"
     }
   ],
   "packageRules": [
