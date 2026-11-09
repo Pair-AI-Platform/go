@@ -58,7 +58,10 @@ environment:
 
 annotations:
   org.opencontainers.image.title: Go 1.27 (Development)
-  org.opencontainers.image.description: Go 1.27 on Wolfi with build-base (gcc, make), pkgconf, git and CGO toolchain. Non-root.
+  org.opencontainers.image.description: Go 1.27 development image on Wolfi with build-base (gcc, make), pkgconf, git and CGO toolchain. Non-root. Verified upstream go.dev binary.
+  org.opencontainers.image.url: https://github.com/Pair-AI-Platform/go
+  org.opencontainers.image.documentation: https://pair-ai-platform.github.io/go/
+  org.opencontainers.image.source: https://github.com/Pair-AI-Platform/go
 
 archs:
   - x86_64
