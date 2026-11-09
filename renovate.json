@@ -30,9 +30,9 @@
     {
       "customType": "regex",
       "description": "Tool images pinned by tag and digest in the scripts (Grype)",
-      "managerFilePatterns": [
-        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
-        "/^scripts/[^/]+\\.sh$/"
+      "fileMatch": [
+        "^\\.github/workflows/[^/]+\\.ya?ml$",
+        "^scripts/[^/]+\\.sh$"
       ],
       "matchStrings": [
         "(?<depName>[a-z0-9][a-z0-9._-]*(?:/[a-z0-9][a-z0-9._-]*)+):(?<currentValue>[\\w.-]+)@(?<currentDigest>sha256:[a-f0-9]{64})"
@@ -42,9 +42,9 @@
     {
       "customType": "regex",
       "description": "Tool versions annotated with a '# renovate:' comment in the workflows and scripts",
-      "managerFilePatterns": [
-        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
-        "/^scripts/[^/]+\\.sh$/"
+      "fileMatch": [
+        "^\\.github/workflows/[^/]+\\.ya?ml$",
+        "^scripts/[^/]+\\.sh$"
       ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n\\s*[\\w-]+(?::\\s|=)[\"']?(?<currentValue>[^\"'\\s]+)"
@@ -54,8 +54,8 @@
     {
       "customType": "regex",
       "description": "Package versions in the melange recipes, annotated with a '# renovate:' comment (Go upstream from go.dev)",
-      "managerFilePatterns": [
-        "/^melange/[^/]+\\.yaml$/"
+      "fileMatch": [
+        "^melange/[^/]+\\.yaml$"
       ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+) versioning=(?<versioning>\\S+)\\n\\s+version: \"?(?<currentValue>[^\"\\s]+)\"?"
@@ -94,7 +94,7 @@
       "matchDepNames": [
         "golang"
       ],
-      "allowedVersions": "^1\\.27\\.",
+      "allowedVersions": ">=1.27.0 <1.28.0",
       "groupName": "go 1.27 upstream",
       "automerge": true,
       "labels": [
@@ -110,7 +110,7 @@
       "matchDepNames": [
         "golang"
       ],
-      "allowedVersions": "^1\\.26\\.",
+      "allowedVersions": ">=1.26.0 <1.27.0",
       "groupName": "go 1.26 upstream",
       "automerge": true,
       "labels": [
@@ -126,7 +126,7 @@
       "matchDepNames": [
         "golang"
       ],
-      "allowedVersions": "^1\\.25\\.",
+      "allowedVersions": ">=1.25.0 <1.26.0",
       "groupName": "go 1.25 upstream",
       "automerge": true,
       "labels": [
