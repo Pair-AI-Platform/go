@@ -1,0 +1,72 @@
+{
+  "family": "1.25",
+  "release": "1.25.12-20261109.2",
+  "go": "1.25.12",
+  "digest": "sha256:cb2f2c237313325c74d4792e1999e65459368353bb68dcca82c6aa63e2e6b611",
+  "stig": {
+    "x86_64": {
+      "counts": {
+        "notapplicable": 107,
+        "fail": 6,
+        "pass": 85
+      },
+      "applicable": 91,
+      "score": 93.4
+    },
+    "aarch64": {
+      "counts": {
+        "notapplicable": 107,
+        "fail": 6,
+        "pass": 85
+      },
+      "applicable": 91,
+      "score": 93.4
+    }
+  },
+  "vulnerabilities": {
+    "x86_64": {
+      "Critical": 1,
+      "High": 14,
+      "Medium": 6,
+      "Low": 0,
+      "Negligible": 0,
+      "Unknown": 0
+    },
+    "aarch64": {
+      "Critical": 1,
+      "High": 14,
+      "Medium": 6,
+      "Low": 0,
+      "Negligible": 0,
+      "Unknown": 0
+    }
+  },
+  "sbom": {
+    "x86_64": {
+      "packages": 43,
+      "spdx_packages": 199
+    },
+    "aarch64": {
+      "packages": 43,
+      "spdx_packages": 199
+    }
+  },
+  "size": {
+    "x86_64": {
+      "compressed": 81014519,
+      "installed": 232637269
+    },
+    "aarch64": {
+      "compressed": 76286561,
+      "installed": 229293344
+    }
+  },
+  "key_packages": [
+    "ca-certificates-bundle 20261020-r0",
+    "git 2.56.0-r3",
+    "glibc-2.44 2.44-r14",
+    "go-1.25-upstream 1.25.12-r0",
+    "openssl-4.0-libcrypto 4.0.3-r8",
+    "openssl-4.0-libssl 4.0.3-r8"
+  ]
+}
