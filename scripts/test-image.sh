@@ -58,7 +58,7 @@ else
 
   check "CGO compiles and runs with gcc" docker run --rm --entrypoint sh "$image" -c '
     cd /app
-    cat << "EOF" > cgo_test.go
+    cat << "EOF" > cgomain.go
 package main
 /*
 #include <stdio.h>
@@ -70,7 +70,7 @@ func main() {
     fmt.Printf("cgo-%d\n", int(C.get_num()))
 }
 EOF
-    output="$(go run cgo_test.go)"
+    output="$(go run cgomain.go)"
     [ "$output" = "cgo-42" ]'
 fi
 

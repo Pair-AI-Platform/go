@@ -21,6 +21,8 @@ package:
   target-architecture:
     - x86_64
     - aarch64
+  options:
+    no-depends: true
   dependencies:
     provides:
       - go=${{package.full-version}}
@@ -68,6 +70,8 @@ pipeline:
       mkdir -p "${{targets.destdir}}/usr/share/licenses/${{package.name}}"
 
       cp -a go/bin go/pkg go/src go/lib "${{targets.destdir}}/usr/lib/go/"
+      # Remove internal testdata to avoid shipping test ELF binaries and save space
+      find "${{targets.destdir}}/usr/lib/go/src" -type d -name "testdata" -prune -exec rm -rf {} +
       ln -s /usr/lib/go/bin/go "${{targets.destdir}}/usr/bin/go"
       ln -s /usr/lib/go/bin/gofmt "${{targets.destdir}}/usr/bin/gofmt"
       install -Dm644 go/LICENSE "${{targets.destdir}}/usr/share/licenses/${{package.name}}/LICENSE"
