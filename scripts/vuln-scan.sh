@@ -15,7 +15,7 @@ image="$1"
 out="$(mkdir -p "$2" && cd "$2" && pwd)"
 
 # Pinned by digest; Renovate updates it (renovate.json)
-GRYPE_IMAGE="${GRYPE_IMAGE:-anchore/grype:v0.121.2@sha256:6a36234da13f9faa327306ac0b3dab3405cfa2b4eb20c8f904125a8707863913}"
+GRYPE_IMAGE="${GRYPE_IMAGE:-anchore/grype:v0.121.3@sha256:13113eeceab017260370cf540e1d25442c59665fd07d1b09b66d63bb0c282887}"
 
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock "$GRYPE_IMAGE" \
   "docker:$image" -o json -q > "$out/grype.json"
