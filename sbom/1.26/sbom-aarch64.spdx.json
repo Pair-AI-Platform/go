@@ -1,6 +1,6 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "sbom-sha256:c5a9ca50436d3e8da5c4c7334e3295c062f819bf9c80b1a96cc4b39400757711",
+  "name": "sbom-sha256:757006d1c9b3b15b9a0e7c7873f38a8b3db397070c7606f01691fb0218b702b8",
   "spdxVersion": "SPDX-2.3",
   "creationInfo": {
     "created": "2026-11-08T02:29:36Z",
@@ -13,13 +13,13 @@
   "dataLicense": "CC0-1.0",
   "documentNamespace": "https://spdx.org/spdxdocs/apko/",
   "documentDescribes": [
-    "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9"
+    "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af"
   ],
   "packages": [
     {
-      "SPDXID": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
-      "name": "sha256:113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
-      "versionInfo": "sha256:113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "SPDXID": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
+      "name": "sha256:256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
+      "versionInfo": "sha256:256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "filesAnalyzed": false,
       "description": "apko container image",
       "downloadLocation": "NOASSERTION",
@@ -28,20 +28,20 @@
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9"
+          "checksumValue": "256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af"
         }
       ],
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:oci/go@sha256:113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9?arch=arm64\u0026mediaType=application%2Fvnd.oci.image.manifest.v1%2Bjson\u0026os=linux",
+          "referenceLocator": "pkg:oci/go@sha256:256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af?arch=arm64\u0026mediaType=application%2Fvnd.oci.image.manifest.v1%2Bjson\u0026os=linux",
           "referenceType": "purl"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-Package-ImageLayer-sha256-c5a9ca50436d3e8da5c4c7334e3295c062f819bf9c80b1a96cc4b39400757711",
-      "name": "sha256:c5a9ca50436d3e8da5c4c7334e3295c062f819bf9c80b1a96cc4b39400757711",
+      "SPDXID": "SPDXRef-Package-ImageLayer-sha256-757006d1c9b3b15b9a0e7c7873f38a8b3db397070c7606f01691fb0218b702b8",
+      "name": "sha256:757006d1c9b3b15b9a0e7c7873f38a8b3db397070c7606f01691fb0218b702b8",
       "versionInfo": "20230201",
       "filesAnalyzed": false,
       "description": "apko operating system layer",
@@ -51,7 +51,7 @@
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:oci/go@sha256:c5a9ca50436d3e8da5c4c7334e3295c062f819bf9c80b1a96cc4b39400757711?arch=arm64\u0026mediaType=application%2Fvnd.oci.image.layer.v1.tar%2Bgzip\u0026os=linux",
+          "referenceLocator": "pkg:oci/go@sha256:757006d1c9b3b15b9a0e7c7873f38a8b3db397070c7606f01691fb0218b702b8?arch=arm64\u0026mediaType=application%2Fvnd.oci.image.layer.v1.tar%2Bgzip\u0026os=linux",
           "referenceType": "purl"
         }
       ]
@@ -3647,1346 +3647,43 @@
       "primaryPackagePurpose": "FILE"
     },
     {
-      "SPDXID": "SPDXRef-Package-apk-go-1.26-1.26.10-r0",
-      "name": "go-1.26",
+      "SPDXID": "SPDXRef-Package-apk-go-1.26-upstream-1.26.10-r0",
+      "name": "go-1.26-upstream",
       "versionInfo": "1.26.10-r0",
       "filesAnalyzed": false,
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "BSD-3-Clause",
       "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: Wolfi",
+      "originator": "Organization: Unknown",
+      "supplier": "Organization: Unknown",
       "copyrightText": "NOASSERTION",
       "primaryPackagePurpose": "APPLICATION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:apk/wolfi/go-1.26@1.26.10-r0?arch=aarch64\u0026distro=wolfi",
+          "referenceLocator": "pkg:apk/unknown/go-1.26-upstream@1.26.10-r0?arch=aarch64",
           "referenceType": "purl"
-        },
-        {
-          "referenceCategory": "SECURITY",
-          "referenceLocator": "cpe:2.3:a:golang:go:1.26.10:*:*:*:*:*:*:*",
-          "referenceType": "cpe23Type"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-Package-Melange-go-1.26.yaml-91d20016898e4f3c970a9b2fca24a73643408987",
-      "name": "go-1.26.yaml",
-      "versionInfo": "91d20016898e4f3c970a9b2fca24a73643408987",
+      "SPDXID": "SPDXRef-Package-Melange-melange-go-1.26-upstream.yaml-d53d2ad7fa558a6c4ea498172ee54507788ef5af",
+      "name": "melange/go-1.26-upstream.yaml",
+      "versionInfo": "d53d2ad7fa558a6c4ea498172ee54507788ef5af",
       "filesAnalyzed": false,
       "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "Apache-2.0",
+      "licenseDeclared": "NOASSERTION",
       "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: Wolfi",
+      "originator": "Organization: Unknown",
+      "supplier": "Organization: Unknown",
       "primaryPackagePurpose": "INSTALL",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:github/chainguard-dev/stereo@91d20016898e4f3c970a9b2fca24a73643408987#go-1.26.yaml",
+          "referenceLocator": "pkg:github/https:/%2Funknown%2Funknown%2Funknown@d53d2ad7fa558a6c4ea498172ee54507788ef5af#melange/go-1.26-upstream.yaml",
           "referenceType": "purl"
         }
       ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-Source-github.com-golang-go-go1.26.10-4e8c85f5319d999bfd7617fdc191631e5634e3c5-0",
-      "name": "go",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "https://github.com/golang/go/archive/4e8c85f5319d999bfd7617fdc191631e5634e3c5.tar.gz",
-      "originator": "Organization: Golang",
-      "supplier": "Organization: Golang",
-      "primaryPackagePurpose": "SOURCE",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:github/golang/go@go1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm--observablehq-plot-5b2aaee943fb091a",
-      "name": "@observablehq/plot",
-      "versionInfo": "0.6.9",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/@observablehq/plot/-/plot-0.6.9.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/%40observablehq/plot@0.6.9",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-binary-search-bounds-6d6552f93b6e442a",
-      "name": "binary-search-bounds",
-      "versionInfo": "2.0.5",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/binary-search-bounds/-/binary-search-bounds-2.0.5.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/binary-search-bounds@2.0.5",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-asm-8f9c6307be5531af",
-      "name": "cmd/asm",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/asm",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/asm",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-cgo-e3a08d1b0d91f655",
-      "name": "cmd/cgo",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/cgo",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/cgo",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-compile-c015d714b587c745",
-      "name": "cmd/compile",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/compile",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/compile",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-cover-4b81acaac2665cdf",
-      "name": "cmd/cover",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/cover",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/cover",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-fix-95e9f010594358e6",
-      "name": "cmd/fix",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/fix",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/fix",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-go-0565c090f587f0dd",
-      "name": "cmd/go",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/bin/go",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/go",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-gofmt-8219dccf0e07aac6",
-      "name": "cmd/gofmt",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/bin/gofmt",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/gofmt",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-link-b2ee96337d5a5107",
-      "name": "cmd/link",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/link",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/link",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-preprofile-c851e4b2515b4eea",
-      "name": "cmd/preprofile",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/preprofile",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/preprofile",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-cmd-vet-c97cbf64b93ca427",
-      "name": "cmd/vet",
-      "versionInfo": "UNKNOWN",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/vet",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/cmd/vet",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-commander-18b04d6328944746",
-      "name": "commander",
-      "versionInfo": "7.2.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/commander/-/commander-7.2.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/commander@7.2.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-38d7b26ebe87d632",
-      "name": "d3",
-      "versionInfo": "7.8.5",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3/-/d3-7.8.5.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3@7.8.5",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-array-1df7d14a65f55697",
-      "name": "d3-array",
-      "versionInfo": "3.2.3",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-array/-/d3-array-3.2.3.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-array@3.2.3",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-axis-18e8f5a97a53e884",
-      "name": "d3-axis",
-      "versionInfo": "3.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-axis/-/d3-axis-3.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-axis@3.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-brush-246e0045800b472d",
-      "name": "d3-brush",
-      "versionInfo": "3.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-brush/-/d3-brush-3.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-brush@3.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-chord-3c06f33839f66d20",
-      "name": "d3-chord",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-chord/-/d3-chord-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-chord@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-color-9fa2dc2216c40c5f",
-      "name": "d3-color",
-      "versionInfo": "3.1.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-color/-/d3-color-3.1.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-color@3.1.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-contour-f402012482c0a458",
-      "name": "d3-contour",
-      "versionInfo": "4.0.2",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-contour/-/d3-contour-4.0.2.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-contour@4.0.2",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-delaunay-741a4dde837ce2d2",
-      "name": "d3-delaunay",
-      "versionInfo": "6.0.4",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-delaunay/-/d3-delaunay-6.0.4.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-delaunay@6.0.4",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-dispatch-88e89edf8ae25588",
-      "name": "d3-dispatch",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-dispatch/-/d3-dispatch-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-dispatch@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-drag-c351c835035e0e24",
-      "name": "d3-drag",
-      "versionInfo": "3.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-drag/-/d3-drag-3.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-drag@3.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-dsv-9e5008cd96e28a10",
-      "name": "d3-dsv",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-dsv/-/d3-dsv-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-dsv@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-ease-69411a7a4678de93",
-      "name": "d3-ease",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-ease/-/d3-ease-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-ease@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-fetch-61bb7e3fa6119cf9",
-      "name": "d3-fetch",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-fetch/-/d3-fetch-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-fetch@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-force-84d6631e38325b50",
-      "name": "d3-force",
-      "versionInfo": "3.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-force/-/d3-force-3.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-force@3.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-format-ef6ea6e94beef45c",
-      "name": "d3-format",
-      "versionInfo": "3.1.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-format/-/d3-format-3.1.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-format@3.1.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-geo-bfcf3e5a95dbc25b",
-      "name": "d3-geo",
-      "versionInfo": "3.1.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-geo/-/d3-geo-3.1.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-geo@3.1.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-hierarchy-dcedd4cfa305c9a9",
-      "name": "d3-hierarchy",
-      "versionInfo": "3.1.2",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-hierarchy/-/d3-hierarchy-3.1.2.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-hierarchy@3.1.2",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-interpolate-42f6bccdc8090f53",
-      "name": "d3-interpolate",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-interpolate/-/d3-interpolate-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-interpolate@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-path-707634e5f07e4686",
-      "name": "d3-path",
-      "versionInfo": "3.1.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-path/-/d3-path-3.1.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-path@3.1.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-polygon-6e53a9f617fc61de",
-      "name": "d3-polygon",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-polygon/-/d3-polygon-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-polygon@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-quadtree-eb20710869cc33bb",
-      "name": "d3-quadtree",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-quadtree/-/d3-quadtree-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-quadtree@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-random-8ab20c752a60d3a6",
-      "name": "d3-random",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-random/-/d3-random-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-random@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-scale-4d5833cce427e3b9",
-      "name": "d3-scale",
-      "versionInfo": "4.0.2",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-scale/-/d3-scale-4.0.2.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-scale@4.0.2",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-scale-chromatic-2b56d11cdf3d4a04",
-      "name": "d3-scale-chromatic",
-      "versionInfo": "3.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-scale-chromatic/-/d3-scale-chromatic-3.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-scale-chromatic@3.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-selection-2cbcbb01c4331ab4",
-      "name": "d3-selection",
-      "versionInfo": "3.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-selection/-/d3-selection-3.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-selection@3.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-shape-504d1e8e095b3ef3",
-      "name": "d3-shape",
-      "versionInfo": "3.2.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-shape/-/d3-shape-3.2.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-shape@3.2.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-time-eb136513c5578c2f",
-      "name": "d3-time",
-      "versionInfo": "3.1.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-time/-/d3-time-3.1.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-time@3.1.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-time-format-14b8f6f25fa1d76c",
-      "name": "d3-time-format",
-      "versionInfo": "4.1.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-time-format/-/d3-time-format-4.1.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-time-format@4.1.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-timer-91123387a2bd5054",
-      "name": "d3-timer",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-timer/-/d3-timer-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-timer@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-transition-824800cb701305e2",
-      "name": "d3-transition",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-transition/-/d3-transition-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-transition@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-d3-zoom-a451d64a4323a6d2",
-      "name": "d3-zoom",
-      "versionInfo": "3.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/d3-zoom/-/d3-zoom-3.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/d3-zoom@3.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-delaunator-8e6bfd5885ca812e",
-      "name": "delaunator",
-      "versionInfo": "5.0.0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/delaunator/-/delaunator-5.0.0.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/delaunator@5.0.0",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "name": "go-1.26",
-      "versionInfo": "1.26.10-r0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "description": "the Go programming language",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from APK DB: /.PKGINFO",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "SECURITY",
-          "referenceLocator": "cpe:2.3:a:golang:go:1.26.10-r0:*:*:*:*:*:*:*",
-          "referenceType": "cpe23Type"
-        },
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:apk/wolfi/go-1.26@1.26.10-r0?arch=aarch64\u0026origin=go-1.26",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-iconv-lite-efa85d2831a39c03",
-      "name": "iconv-lite",
-      "versionInfo": "0.6.3",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/iconv-lite@0.6.3",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-internmap-fe2231edc290279c",
-      "name": "internmap",
-      "versionInfo": "2.0.3",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/internmap/-/internmap-2.0.3.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/internmap@2.0.3",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-interval-tree-1d-c30f5a4d0f805cd1",
-      "name": "interval-tree-1d",
-      "versionInfo": "1.0.4",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/interval-tree-1d/-/interval-tree-1d-1.0.4.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/interval-tree-1d@1.0.4",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-isoformat-f6bfb19ea979afd4",
-      "name": "isoformat",
-      "versionInfo": "0.2.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/isoformat/-/isoformat-0.2.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/isoformat@0.2.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-robust-predicates-e704f371e05de6ca",
-      "name": "robust-predicates",
-      "versionInfo": "3.0.1",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/robust-predicates/-/robust-predicates-3.0.1.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/robust-predicates@3.0.1",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-rw-1e4ffd13e72f733a",
-      "name": "rw",
-      "versionInfo": "1.3.3",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/rw/-/rw-1.3.3.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/rw@1.3.3",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-npm-safer-buffer-ddf05be4fb14c578",
-      "name": "safer-buffer",
-      "versionInfo": "2.1.2",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from installed node module manifest file: usr/lib/go/src/cmd/vendor/golang.org/x/telemetry/package-lock.json",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:npm/safer-buffer@2.1.2",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-9d936a52ec330cc7",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/bin/go",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-9a86a946f8a6eaf6",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/bin/gofmt",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-1e5654764312048e",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/asm",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-77f11325ce62cb34",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/cgo",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-e8ce29b3407be750",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/compile",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-82cbe759cc6ed40a",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/cover",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-5b2b4f5a88a2034b",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/fix",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-16d005f45a615912",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/link",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-c1befaa94f0c1164",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/preprofile",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-Package-go-module-stdlib-ec4a61d58761e983",
-      "name": "stdlib",
-      "versionInfo": "go1.26.10",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "BSD-3-Clause",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "sourceInfo": "acquired package info from go module information: usr/lib/go/pkg/tool/linux_arm64/vet",
-      "copyrightText": "NOASSERTION",
-      "externalRefs": [
-        {
-          "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:golang/stdlib@1.26.10",
-          "referenceType": "purl"
-        }
-      ]
-    },
-    {
-      "SPDXID": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "name": "go-1.26",
-      "versionInfo": "1.26.10-r0",
-      "filesAnalyzed": false,
-      "licenseConcluded": "NOASSERTION",
-      "licenseDeclared": "NOASSERTION",
-      "downloadLocation": "NOASSERTION",
-      "originator": "Organization: Wolfi",
-      "supplier": "Organization: chainguard",
-      "copyrightText": "NOASSERTION",
-      "primaryPackagePurpose": "FILE"
     },
     {
       "SPDXID": "SPDXRef-Package-apk-tzdata-2026f-r0",
@@ -5083,9 +3780,9 @@
   ],
   "relationships": [
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-ImageLayer-sha256-c5a9ca50436d3e8da5c4c7334e3295c062f819bf9c80b1a96cc4b39400757711"
+      "relatedSpdxElement": "SPDXRef-Package-ImageLayer-sha256-757006d1c9b3b15b9a0e7c7873f38a8b3db397070c7606f01691fb0218b702b8"
     },
     {
       "spdxElementId": "SPDXRef-Package-apk-wolfi-baselayout-20230201-r31",
@@ -5103,7 +3800,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-wolfi-baselayout"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-wolfi-baselayout-20230201-r31"
     },
@@ -5128,7 +3825,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-ca-certificates-bundle"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-ca-certificates-bundle-20261020-r0"
     },
@@ -5153,7 +3850,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-glibc-2.44-locale-posix"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-glibc-2.44-locale-posix-2.44-r14"
     },
@@ -5178,7 +3875,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libgcc"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libgcc-16.2.0-r2"
     },
@@ -5203,7 +3900,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-glibc-2.44"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-glibc-2.44-2.44-r14"
     },
@@ -5228,7 +3925,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-ld-linux-2.44"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-ld-linux-2.44-2.44-r14"
     },
@@ -5253,7 +3950,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-ncurses-terminfo-base"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-ncurses-terminfo-base-6.6.20261107-r0"
     },
@@ -5278,7 +3975,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-ncurses"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-ncurses-6.6.20261107-r0"
     },
@@ -5303,7 +4000,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-bash"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-bash-5.3-r14"
     },
@@ -5328,7 +4025,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libxcrypt"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libxcrypt-4.5.2-r8"
     },
@@ -5353,7 +4050,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libcrypt1-2.44"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libcrypt1-2.44-2.44-r14"
     },
@@ -5378,7 +4075,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-busybox"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-busybox-1.38.0-r3"
     },
@@ -5403,7 +4100,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-openssl-provider-legacy-allowed"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-openssl-provider-legacy-allowed-4.1.0-r0"
     },
@@ -5428,7 +4125,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libbrotlicommon1"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libbrotlicommon1-1.2.1-r3"
     },
@@ -5453,7 +4150,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libbrotlidec1"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libbrotlidec1-1.2.1-r3"
     },
@@ -5478,7 +4175,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libbrotlienc1"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libbrotlienc1-1.2.1-r3"
     },
@@ -5503,7 +4200,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-openssl-4.0-libcrypto"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-openssl-4.0-libcrypto-4.0.3-r8"
     },
@@ -5528,7 +4225,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-gdbm"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-gdbm-1.26-r9"
     },
@@ -5553,7 +4250,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-lmdb"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-lmdb-0.9.35-r3"
     },
@@ -5578,7 +4275,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-readline"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-readline-8.3-r3"
     },
@@ -5603,7 +4300,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-sqlite-libs"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-sqlite-libs-3.54.1-r0"
     },
@@ -5628,7 +4325,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-heimdal-libs"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-heimdal-libs-7.8.0-r55"
     },
@@ -5653,7 +4350,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-cyrus-sasl-heimdal-libs"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-cyrus-sasl-heimdal-libs-2.1.28-r58"
     },
@@ -5673,7 +4370,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-krb5-conf"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-krb5-conf-1.0-r10"
     },
@@ -5698,7 +4395,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libcom-err"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libcomC95err-1.47.4-r5"
     },
@@ -5723,7 +4420,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-keyutils-libs"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-keyutils-libs-1.6.3-r41"
     },
@@ -5748,7 +4445,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-openssl-4.0-libssl"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-openssl-4.0-libssl-4.0.3-r8"
     },
@@ -5773,7 +4470,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libverto"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libverto-0.3.2-r11"
     },
@@ -5798,7 +4495,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-krb5-libs"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-krb5-libs-1.22.2-r6"
     },
@@ -5823,7 +4520,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libunistring"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libunistring-1.5-r1"
     },
@@ -5848,7 +4545,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libidn2"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libidn2-2.3.8-r12"
     },
@@ -5873,7 +4570,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libldap-2.7"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libldap-2.7-2.7.2-r0"
     },
@@ -5898,7 +4595,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libnghttp2-14"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libnghttp2-14-1.71.0-r0"
     },
@@ -5923,7 +4620,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-nghttp3"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-nghttp3-1.19.0-r0"
     },
@@ -5948,7 +4645,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-ngtcp2"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-ngtcp2-1.26.0-r0"
     },
@@ -5973,7 +4670,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libpsl"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libpsl-0.23.3-r4"
     },
@@ -5998,7 +4695,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-zlib"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-zlib-1.3.2.1C95rc20260921-r2"
     },
@@ -6023,7 +4720,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libcurl-openssl4"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libcurl-openssl4-8.23.0-r3"
     },
@@ -6048,7 +4745,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libexpat1"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libexpat1-2.10.0-r1"
     },
@@ -6073,7 +4770,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-libpcre2-8-0"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-libpcre2-8-0-10.49-r3"
     },
@@ -6098,654 +4795,19 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-git"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-git-2.56.0-r3"
     },
     {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-1.26.10-r0",
+      "spdxElementId": "SPDXRef-Package-apk-go-1.26-upstream-1.26.10-r0",
       "relationshipType": "DESCRIBED_BY",
-      "relatedSpdxElement": "SPDXRef-Package-Melange-go-1.26.yaml-91d20016898e4f3c970a9b2fca24a73643408987"
+      "relatedSpdxElement": "SPDXRef-Package-Melange-melange-go-1.26-upstream.yaml-d53d2ad7fa558a6c4ea498172ee54507788ef5af"
     },
     {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-1.26.10-r0",
-      "relationshipType": "GENERATED_FROM",
-      "relatedSpdxElement": "SPDXRef-Package-Source-github.com-golang-go-go1.26.10-4e8c85f5319d999bfd7617fdc191631e5634e3c5-0"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-go-0565c090f587f0dd"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-time-format-14b8f6f25fa1d76c"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-16d005f45a615912"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-commander-18b04d6328944746"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-axis-18e8f5a97a53e884"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-array-1df7d14a65f55697"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-rw-1e4ffd13e72f733a"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-1e5654764312048e"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-brush-246e0045800b472d"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-scale-chromatic-2b56d11cdf3d4a04"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-selection-2cbcbb01c4331ab4"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-38d7b26ebe87d632"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-chord-3c06f33839f66d20"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-interpolate-42f6bccdc8090f53"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-cover-4b81acaac2665cdf"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-scale-4d5833cce427e3b9"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-shape-504d1e8e095b3ef3"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm--observablehq-plot-5b2aaee943fb091a"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-5b2b4f5a88a2034b"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-fetch-61bb7e3fa6119cf9"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-ease-69411a7a4678de93"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-binary-search-bounds-6d6552f93b6e442a"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-polygon-6e53a9f617fc61de"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-path-707634e5f07e4686"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-delaunay-741a4dde837ce2d2"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-77f11325ce62cb34"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-gofmt-8219dccf0e07aac6"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-transition-824800cb701305e2"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-82cbe759cc6ed40a"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-force-84d6631e38325b50"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-dispatch-88e89edf8ae25588"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-random-8ab20c752a60d3a6"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-delaunator-8e6bfd5885ca812e"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-asm-8f9c6307be5531af"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-timer-91123387a2bd5054"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-fix-95e9f010594358e6"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-9a86a946f8a6eaf6"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-9d936a52ec330cc7"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-dsv-9e5008cd96e28a10"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-color-9fa2dc2216c40c5f"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-zoom-a451d64a4323a6d2"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-link-b2ee96337d5a5107"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-geo-bfcf3e5a95dbc25b"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-compile-c015d714b587c745"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-c1befaa94f0c1164"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-interval-tree-1d-c30f5a4d0f805cd1"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-drag-c351c835035e0e24"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-preprofile-c851e4b2515b4eea"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-vet-c97cbf64b93ca427"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-hierarchy-dcedd4cfa305c9a9"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-safer-buffer-ddf05be4fb14c578"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-cgo-e3a08d1b0d91f655"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-robust-predicates-e704f371e05de6ca"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-e8ce29b3407be750"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-time-eb136513c5578c2f"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-quadtree-eb20710869cc33bb"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-ec4a61d58761e983"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-format-ef6ea6e94beef45c"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-iconv-lite-efa85d2831a39c03"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-contour-f402012482c0a458"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-isoformat-f6bfb19ea979afd4"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-393582a8732687f5",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-internmap-fe2231edc290279c"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm--observablehq-plot-5b2aaee943fb091a"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-binary-search-bounds-6d6552f93b6e442a"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-asm-8f9c6307be5531af"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-cgo-e3a08d1b0d91f655"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-compile-c015d714b587c745"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-cover-4b81acaac2665cdf"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-fix-95e9f010594358e6"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-go-0565c090f587f0dd"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-gofmt-8219dccf0e07aac6"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-link-b2ee96337d5a5107"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-preprofile-c851e4b2515b4eea"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-cmd-vet-c97cbf64b93ca427"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-commander-18b04d6328944746"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-38d7b26ebe87d632"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-array-1df7d14a65f55697"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-axis-18e8f5a97a53e884"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-brush-246e0045800b472d"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-chord-3c06f33839f66d20"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-color-9fa2dc2216c40c5f"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-contour-f402012482c0a458"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-delaunay-741a4dde837ce2d2"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-dispatch-88e89edf8ae25588"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-drag-c351c835035e0e24"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-dsv-9e5008cd96e28a10"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-ease-69411a7a4678de93"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-fetch-61bb7e3fa6119cf9"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-force-84d6631e38325b50"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-format-ef6ea6e94beef45c"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-geo-bfcf3e5a95dbc25b"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-hierarchy-dcedd4cfa305c9a9"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-interpolate-42f6bccdc8090f53"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-path-707634e5f07e4686"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-polygon-6e53a9f617fc61de"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-quadtree-eb20710869cc33bb"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-random-8ab20c752a60d3a6"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-scale-4d5833cce427e3b9"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-scale-chromatic-2b56d11cdf3d4a04"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-selection-2cbcbb01c4331ab4"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-shape-504d1e8e095b3ef3"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-time-eb136513c5578c2f"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-time-format-14b8f6f25fa1d76c"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-timer-91123387a2bd5054"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-transition-824800cb701305e2"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-d3-zoom-a451d64a4323a6d2"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-delaunator-8e6bfd5885ca812e"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-apk-go-1.26-393582a8732687f5"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-iconv-lite-efa85d2831a39c03"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-internmap-fe2231edc290279c"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-interval-tree-1d-c30f5a4d0f805cd1"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-isoformat-f6bfb19ea979afd4"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-robust-predicates-e704f371e05de6ca"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-rw-1e4ffd13e72f733a"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-npm-safer-buffer-ddf05be4fb14c578"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-9d936a52ec330cc7"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-9a86a946f8a6eaf6"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-1e5654764312048e"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-77f11325ce62cb34"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-e8ce29b3407be750"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-82cbe759cc6ed40a"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-5b2b4f5a88a2034b"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-16d005f45a615912"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-c1befaa94f0c1164"
-    },
-    {
-      "spdxElementId": "SPDXRef-DocumentRoot-Directory-go-1.26",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-go-module-stdlib-ec4a61d58761e983"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-apk-go-1.26-1.26.10-r0",
-      "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-go-1.26"
-    },
-    {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
-      "relatedSpdxElement": "SPDXRef-Package-apk-go-1.26-1.26.10-r0"
+      "relatedSpdxElement": "SPDXRef-Package-apk-go-1.26-upstream-1.26.10-r0"
     },
     {
       "spdxElementId": "SPDXRef-Package-apk-tzdata-2026f-r0",
@@ -6768,7 +4830,7 @@
       "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-tzdata"
     },
     {
-      "spdxElementId": "SPDXRef-Package-Image-sha256-113716e04cf5b44de9ba30e5d67e91da2752fc64ff33f9bb6a5518724653a7e9",
+      "spdxElementId": "SPDXRef-Package-Image-sha256-256de98f9ad02759ba9b2d34ba8b2f2af60a2f18c84f14f26c3a22bb3d6161af",
       "relationshipType": "CONTAINS",
       "relatedSpdxElement": "SPDXRef-Package-apk-tzdata-2026f-r0"
     }

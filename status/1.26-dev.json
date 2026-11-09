@@ -1,8 +1,8 @@
 {
   "family": "1.26-dev",
-  "release": "1.26.10-dev-20261109.4",
+  "release": "1.26.10-dev-20261109.5",
   "go": "1.26.10",
-  "digest": "sha256:e3f849d546120d19a5c1e83cb8950e0869856ddec7cfafa036150aad446e26e6",
+  "digest": "sha256:57a4f72791165f4f4fcfb376393cba5ee1e199ef399dd8c262cc4201066a40a8",
   "stig": {
     "x86_64": {
       "counts": {
@@ -44,21 +44,21 @@
   "sbom": {
     "x86_64": {
       "packages": 75,
-      "spdx_packages": 407
+      "spdx_packages": 342
     },
     "aarch64": {
       "packages": 75,
-      "spdx_packages": 407
+      "spdx_packages": 342
     }
   },
   "size": {
     "x86_64": {
-      "compressed": 284846763,
-      "installed": 776091138
+      "compressed": 288923729,
+      "installed": 792275415
     },
     "aarch64": {
-      "compressed": 266549103,
-      "installed": 827548257
+      "compressed": 270362132,
+      "installed": 843916618
     }
   },
   "key_packages": [
@@ -68,7 +68,7 @@
     "git 2.56.0-r3",
     "glibc-2.44 2.44-r14",
     "glibc-2.44-dev 2.44-r14",
-    "go-1.26 1.26.10-r0",
+    "go-1.26-upstream 1.26.10-r0",
     "libstdc++ 16.2.0-r2",
     "libstdc++-dev 16.2.0-r2",
     "make 4.4.1-r15",
