@@ -1,0 +1,72 @@
+name: Renovate
+
+# Self-hosted Renovate for this repository only (no autodiscovery). It opens or updates the pull
+# requests and merges the ones whose checks (pr.yml) have passed. It runs every hour, as soon as the
+# checks of a pull request finish (so a green update merges right away), and after every push to
+# main (so the other open pull requests are rebased). Runs queue up; they never overlap.
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_run:
+    workflows: [PR]
+    types: [completed]
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: "Renovate log level (debug, info, warn, error)"
+        required: false
+        default: "info"
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  renovate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Renovate acts as the GitHub App renovate(bot)-updater, installed on this repository. Its
+      # short-lived installation token, unlike GITHUB_TOKEN, can update workflow files, and its pull
+      # requests and merges start the checks (so updates automerge) and the release.
+      # vars.RENOVATE_APP_CLIENT_ID: the App's client ID; secrets.RENOVATE_APP_PRIVATE_KEY: its .pem.
+      - name: App Token
+        id: app-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.RENOVATE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+          permission-issues: write
+          permission-workflows: write
+          permission-checks: read
+          permission-statuses: read
+          permission-vulnerability-alerts: read
+
+      - name: Renovate
+        uses: renovatebot/github-action@1c0cf989c02653fba0efe7ca5772338860ca71dc # v46.3.12
+        with:
+          configurationFile: renovate.json
+          token: ${{ steps.app-token.outputs.token }}
+        env:
+          RENOVATE_REPOSITORIES: ${{ github.repository }}
+          RENOVATE_AUTODISCOVER: 'false'
+          RENOVATE_ONBOARDING: 'false'
+          RENOVATE_REQUIRE_CONFIG: 'optional'
+          # Commits are authored by the App's bot user
+          RENOVATE_GIT_AUTHOR: 'renovate-bot-updater[bot] <350416368+renovate-bot-updater[bot]@users.noreply.github.com>'
+          # The only command a pull request may run: refreshing the Go release keys
+          RENOVATE_ALLOWED_COMMANDS: '["^bash scripts/update-go-release-keys\\.sh$"]'
+          LOG_LEVEL: ${{ inputs.logLevel || 'info' }}

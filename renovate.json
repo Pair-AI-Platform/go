@@ -1,0 +1,118 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Keeps apko, the Grype image, the CLI tools and the GitHub Actions current. The Wolfi packages inside the images are not pinned: the release rebuilds every image every two hours and publishes it when its content changed. Runs self-hosted on this repository only (.github/workflows/renovate.yml).",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests",
+    ":dependencyDashboard",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "timezone": "Africa/Cairo",
+  "schedule": [
+    "at any time"
+  ],
+  "enabledManagers": [
+    "custom.regex",
+    "github-actions"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 10,
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
+  "platformAutomerge": false,
+  "ignoreTests": false,
+  "rebaseWhen": "behind-base-branch",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Tool images pinned by tag and digest in the scripts (Grype)",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
+        "/^scripts/[^/]+\\.sh$/"
+      ],
+      "matchStrings": [
+        "(?<depName>[a-z0-9][a-z0-9._-]*(?:/[a-z0-9][a-z0-9._-]*)+):(?<currentValue>[\\w.-]+)@(?<currentDigest>sha256:[a-f0-9]{64})"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Tool versions annotated with a '# renovate:' comment in the workflows and scripts",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/[^/]+\\.ya?ml$/",
+        "/^scripts/[^/]+\\.sh$/"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n\\s*[\\w-]+(?::\\s|=)[\"']?(?<currentValue>[^\"'\\s]+)"
+      ],
+      "extractVersionTemplate": "^v?(?<version>.+)$"
+    },
+    {
+      "customType": "regex",
+      "description": "Package versions in the melange recipes, annotated with a '# renovate:' comment (Go 1.25 from go.dev)",
+      "managerFilePatterns": [
+        "/^melange/[^/]+\\.yaml$/"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+) versioning=(?<versioning>\\S+)\\n\\s+version: \"?(?<currentValue>[^\"\\s]+)\"?"
+      ],
+      "versioningTemplate": "{{{versioning}}}"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Tool images and GitHub Actions: one grouped pull request, automerged once its checks pass",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest",
+        "pin",
+        "pinDigest"
+      ],
+      "groupName": "ci tooling"
+    },
+    {
+      "description": "Major versions change behaviour: open the pull request, merge it by hand",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false,
+      "labels": [
+        "dependencies",
+        "major"
+      ]
+    },
+    {
+      "description": "Go 1.25 from go.dev: newest 1.25.x patch release as soon as released (security releases included), automerged once the images build, test and scan",
+      "matchFileNames": [
+        "melange/go-1.25-upstream.yaml"
+      ],
+      "matchDepNames": [
+        "golang"
+      ],
+      "allowedVersions": "^1\\.25\\.",
+      "groupName": "go 1.25 upstream",
+      "automerge": true,
+      "labels": [
+        "dependencies",
+        "golang"
+      ]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": [
+      "at any time"
+    ],
+    "minimumReleaseAge": null,
+    "labels": [
+      "dependencies",
+      "security"
+    ]
+  }
+}

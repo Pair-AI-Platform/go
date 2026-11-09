@@ -1,0 +1,72 @@
+name: Wolfi Watch
+
+# Every hour: works out which Wolfi package versions each image would get if it were built now, and
+# starts the release workflow as soon as that differs from the last check. A Wolfi fix therefore
+# reaches the images within about an hour; the release publishes only the images whose content
+# changed. The scheduled release every two hours stays as the safety net.
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  watch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+        with:
+          # renovate: datasource=github-releases depName=sigstore/cosign
+          cosign-release: v3.1.4
+
+      - name: Install apko
+        run: |
+          scripts/install-tools.sh "$RUNNER_TEMP/bin" apko
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+
+      - name: Resolve the Wolfi Packages
+        id: state
+        run: |
+          mkdir -p state
+          scripts/wolfi-state.sh > state/wolfi-state.txt
+          echo "hash=$(sha256sum state/wolfi-state.txt | cut -c1-32)" >> "$GITHUB_OUTPUT"
+          echo "$(wc -l < state/wolfi-state.txt) packages across all images"
+
+      # The cache is only a marker: a hit means this exact package state was already seen
+      - name: Seen Before
+        id: seen
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: state
+          key: wolfi-state-${{ steps.state.outputs.hash }}
+          lookup-only: true
+
+      - name: Start a Release
+        if: steps.seen.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Wolfi packages changed; starting the release"
+          gh workflow run release.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME"
+
+      - name: Remember This State
+        if: steps.seen.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: state
+          key: wolfi-state-${{ steps.state.outputs.hash }}
