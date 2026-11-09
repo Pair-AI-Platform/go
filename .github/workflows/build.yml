@@ -506,7 +506,7 @@ jobs:
           FLOATING: ${{ steps.tags.outputs.floating }}
         run: |
           major="${FAMILY%%-*}"
-          if [ "$FLAVOR" = dev ]; then re="^${major}\.[0-9]+\.[0-9]+-dev-[0-9]{8}\.[0-9]+\$"; else re="^${major}\.[0-9]+\.[0-9]+-[0-9]{8}\.[0-9]+\$"; fi
+          if [ "$FLAVOR" = dev ]; then re="^${major}\.[0-9]+-dev-[0-9]{8}\.[0-9]+\$"; else re="^${major}\.[0-9]+-[0-9]{8}\.[0-9]+\$"; fi
           release=""
           for tag in $(oras repo tags "$IMAGE" | grep -E "$re" | sort -r); do
             if [ "$(oras resolve "$IMAGE:$tag")" = "$CURRENT" ]; then release="$tag"; break; fi
