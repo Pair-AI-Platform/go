@@ -1,8 +1,8 @@
 {
   "family": "1.25-dev",
-  "release": "1.25.14-dev-20261110.30",
+  "release": "1.25.14-dev-20261110.31",
   "go": "1.25.14",
-  "digest": "sha256:e0abc98d08e0737408b76c478077a95d08be1c641ff4f38ebcaa48d90b364043",
+  "digest": "sha256:ca39f72353b3c476cf2be69d99f48b699795ef40e50bcc9c8f865d35ff6276e9",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,16 +53,16 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 281724855,
+      "compressed": 281724953,
       "installed": 766829018
     },
     "aarch64": {
-      "compressed": 263861417,
+      "compressed": 263861527,
       "installed": 819772276
     }
   },
   "key_packages": [
-    "binutils 2.47-r3",
+    "binutils 2.47-r4",
     "ca-certificates-bundle 20261020-r0",
     "gcc 16.2.0-r3",
     "git 2.56.0-r3",
