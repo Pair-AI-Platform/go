@@ -21,7 +21,7 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock "$GRYPE_IMAGE" \
   "docker:$image" -o json -q > "$out/grype.json"
 
 # The image's apk database: which installed package owns which file
-cid="$(docker create "$image")"
+cid="$(docker create "$image" true 2>/dev/null || docker create "$image")"
 docker cp "$cid:/usr/lib/apk/db/installed" - | tar -xO > "$out/apk-installed"
 docker rm "$cid" >/dev/null
 

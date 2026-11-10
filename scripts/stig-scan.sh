@@ -28,7 +28,7 @@ OPENSCAP_IMAGE="${OPENSCAP_IMAGE:-stig-scanner:local}"
 DATASTREAM=/usr/share/xml/scap/ssg/content/ssg-chainguard-gpos-ds.xml
 PROFILE=xccdf_basic_profile_.check
 
-cid="$(docker create "$image")"
+cid="$(docker create "$image" true 2>/dev/null || docker create "$image")"
 trap 'docker rm "$cid" >/dev/null 2>&1 || true' EXIT
 
 chmod 777 "$out"

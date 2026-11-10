@@ -37,6 +37,9 @@ paths:
 
 work-dir: /app
 
+entrypoint:
+  command: /usr/bin/pdfinfo
+
 environment:
   PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
   SSL_CERT_FILE: /etc/ssl/certs/ca-certificates.crt
@@ -51,3 +54,4 @@ annotations:
 archs:
   - x86_64
   - aarch64
+
