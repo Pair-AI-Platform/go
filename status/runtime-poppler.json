@@ -1,0 +1,72 @@
+{
+  "family": "runtime-poppler",
+  "release": "runtime-poppler-26.11.0-20261110.28",
+  "go": "26.11.0",
+  "digest": "sha256:ce4a8c4f11148acb4c19396d96bd6e1437b67843ba1bc89d4c809ff69d505768",
+  "stig": {
+    "x86_64": {
+      "counts": {
+        "notapplicable": 107,
+        "fail": 6,
+        "pass": 85
+      },
+      "applicable": 91,
+      "score": 93.4
+    },
+    "aarch64": {
+      "counts": {
+        "notapplicable": 107,
+        "fail": 6,
+        "pass": 85
+      },
+      "applicable": 91,
+      "score": 93.4
+    }
+  },
+  "vulnerabilities": {
+    "x86_64": {
+      "Critical": 0,
+      "High": 2,
+      "Medium": 0,
+      "Low": 0,
+      "Negligible": 0,
+      "Unknown": 0
+    },
+    "aarch64": {
+      "Critical": 0,
+      "High": 2,
+      "Medium": 0,
+      "Low": 0,
+      "Negligible": 0,
+      "Unknown": 0
+    }
+  },
+  "sbom": {
+    "x86_64": {
+      "packages": 50,
+      "spdx_packages": 234
+    },
+    "aarch64": {
+      "packages": 50,
+      "spdx_packages": 234
+    }
+  },
+  "size": {
+    "x86_64": {
+      "compressed": 26247085,
+      "installed": 65492338
+    },
+    "aarch64": {
+      "compressed": 24291056,
+      "installed": 68559168
+    }
+  },
+  "key_packages": [
+    "ca-certificates-bundle 20261020-r0",
+    "glibc-2.44 2.44-r15",
+    "libstdc++ 16.2.0-r3",
+    "openssl-4.0-libcrypto 4.0.3-r8",
+    "poppler 26.11.0-r0",
+    "poppler-utils 26.11.0-r0"
+  ]
+}
