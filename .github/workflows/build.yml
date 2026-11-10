@@ -187,10 +187,13 @@ jobs:
             --sbom-path out/sbom
           ref="$(docker load -i out/image.tar | sed -n 's/^Loaded image: //p')"
           digest="$(tar -xOf out/image.tar index.json | jq -r '.manifests[0].digest')"
-          go_ver="$(docker run --rm "$ref" version | awk '{print $3}' | sed 's/^go//')"
+          go_ver="$(docker run --rm "$ref" version 2>/dev/null | awk '{print $3}' | sed 's/^go//' || true)"
+          if [ -z "$go_ver" ]; then
+            go_ver="$(docker run --rm "$ref" pdfinfo -v 2>&1 | awk '/pdfinfo version/{print $3}' || echo "poppler")"
+          fi
           echo "REF=$ref" >> "$GITHUB_ENV"
           # The installed packages, as recorded by apk in the image (the same list as the SBOM)
-          cid="$(docker create "$ref")"
+          cid="$(docker create "$ref" pdfinfo 2>/dev/null || docker create "$ref")"
           docker cp "$cid:/usr/lib/apk/db/installed" - | tar -xO \
             | awk -F: '/^P:/{p=$2} /^V:/{print p" "$2}' | sort > results/packages.txt
           docker rm "$cid" >/dev/null
@@ -380,9 +383,14 @@ jobs:
         run: |
           go_ver="$(jq -r .go "results/results-$FAMILY-x86_64/image.json")"
           suffix=""; [ "$FLAVOR" = dev ] && suffix="-dev"
-          release="${go_ver}${suffix}-$(date -u +%Y%m%d).${GITHUB_RUN_NUMBER}"
-          floating="$FAMILY ${go_ver}${suffix}"
-          [ "$LATEST" = true ] && floating="$floating latest${suffix}"
+          if [ "$FAMILY" = "runtime-poppler" ]; then
+            release="runtime-poppler-${go_ver}-$(date -u +%Y%m%d).${GITHUB_RUN_NUMBER}"
+            floating="runtime-poppler poppler"
+          else
+            release="${go_ver}${suffix}-$(date -u +%Y%m%d).${GITHUB_RUN_NUMBER}"
+            floating="$FAMILY ${go_ver}${suffix}"
+            [ "$LATEST" = true ] && floating="$floating latest${suffix}"
+          fi
           echo "release=$release" >> "$GITHUB_OUTPUT"
           echo "floating=$floating" >> "$GITHUB_OUTPUT"
           echo "release tag $release, floating tags $floating"
@@ -506,7 +514,13 @@ jobs:
           FLOATING: ${{ steps.tags.outputs.floating }}
         run: |
           major="${FAMILY%%-*}"
-          if [ "$FLAVOR" = dev ]; then re="^${major}\.[0-9]+-dev-[0-9]{8}\.[0-9]+\$"; else re="^${major}\.[0-9]+-[0-9]{8}\.[0-9]+\$"; fi
+          if [ "$FAMILY" = "runtime-poppler" ]; then
+            re="^runtime-poppler-[0-9]+\.[0-9]+\.[0-9]+-[0-9]{8}\.[0-9]+\$"
+          elif [ "$FLAVOR" = dev ]; then
+            re="^${major}\.[0-9]+-dev-[0-9]{8}\.[0-9]+\$"
+          else
+            re="^${major}\.[0-9]+-[0-9]{8}\.[0-9]+\$"
+          fi
           release=""
           for tag in $(oras repo tags "$IMAGE" | grep -E "$re" | sort -r); do
             if [ "$(oras resolve "$IMAGE:$tag")" = "$CURRENT" ]; then release="$tag"; break; fi

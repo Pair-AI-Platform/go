@@ -27,7 +27,7 @@ import sys
 
 ARCHES = ["x86_64", "aarch64"]
 # Shown in the release notes as the main components of each image (name prefixes)
-KEY_PREFIXES = ("go-", "glibc-", "openssl-", "ca-certificates", "libstdc++", "git", "binutils", "gcc", "make")
+KEY_PREFIXES = ("go-", "glibc-", "openssl-", "ca-certificates", "libstdc++", "git", "binutils", "gcc", "make", "poppler")
 SEVERITIES = ["Critical", "High", "Medium", "Low", "Negligible", "Unknown"]
 
 
@@ -83,7 +83,10 @@ def record(old_path, new_path, results):
 def notes(rec):
     image, release = rec["image"], rec["release"]
     out = [f"## `{image}:{release}`", ""]
-    out.append(f"Go {rec['go']} ({rec['flavor']}). Index digest `{rec['digest']}`.")
+    if rec["family"] == "runtime-poppler":
+        out.append(f"Go static runtime with poppler-utils {rec['go']}. Index digest `{rec['digest']}`.")
+    else:
+        out.append(f"Go {rec['go']} ({rec['flavor']}). Index digest `{rec['digest']}`.")
     out.append("Tags: " + ", ".join(f"`{t}`" for t in [release] + rec["floating"]) + ".")
     out += ["", "### What changed", ""]
     pk = rec["packages"]
@@ -197,9 +200,14 @@ def page(rec, record_dir, site):
     family, e = rec["family"], html.escape
     rows = []
     rows.append(f"<h1>{e(rec['image'])}:{e(rec['release'])}</h1>")
-    rows.append(f"<p>Go {e(rec['go'])} ({e(rec['flavor'])}). Tags: "
-                + ", ".join(f"<code>{e(t)}</code>" for t in [rec['release']] + rec['floating'])
-                + f". Index digest <code>{e(rec['digest'])}</code>.</p>")
+    if rec["family"] == "runtime-poppler":
+        rows.append(f"<p>Go static runtime with poppler-utils {e(rec['go'])}. Tags: "
+                    + ", ".join(f"<code>{e(t)}</code>" for t in [rec['release']] + rec['floating'])
+                    + f". Index digest <code>{e(rec['digest'])}</code>.</p>")
+    else:
+        rows.append(f"<p>Go {e(rec['go'])} ({e(rec['flavor'])}). Tags: "
+                    + ", ".join(f"<code>{e(t)}</code>" for t in [rec['release']] + rec['floating'])
+                    + f". Index digest <code>{e(rec['digest'])}</code>.</p>")
     rows.append('<p><a href="#vulnerabilities">Vulnerabilities</a> · <a href="#sbom">SBOM</a> · '
                 '<a href="#stig">Hardening profile</a></p>')
     findings = merged_findings(rec)

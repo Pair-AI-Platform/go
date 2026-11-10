@@ -26,18 +26,29 @@ for recipe in pathlib.Path("melange").glob("*.yaml"):
 
 entries = []
 for config in sorted(pathlib.Path("apko").glob("go-*.apko.yaml")):
-    m = re.fullmatch(r"go-(\d+\.\d+)(-dev)?\.apko\.yaml", config.name)
-    if not m:
+    m_toolchain = re.fullmatch(r"go-(\d+\.\d+)(-dev)?\.apko\.yaml", config.name)
+    m_runtime = re.fullmatch(r"go-(runtime-[\w-]+)\.apko\.yaml", config.name)
+    if m_toolchain:
+        ver, dev = m_toolchain.group(1), bool(m_toolchain.group(2))
+        family = f"{ver}-dev" if dev else ver
+        flavor = "dev" if dev else "runtime"
+        major = ver
+        latest = (ver == LATEST_VERSION)
+    elif m_runtime:
+        family = m_runtime.group(1)
+        flavor = "runtime"
+        major = family
+        latest = False
+    else:
         sys.exit(f"unexpected config name: {config.name}")
-    ver, dev = m.group(1), bool(m.group(2))
-    family = f"{ver}-dev" if dev else ver
+
     entries.append({
         "config": str(config),
         "image": image,
         "family": family,
-        "flavor": "dev" if dev else "runtime",
-        "major": ver,
-        "latest": ver == LATEST_VERSION,
+        "flavor": flavor,
+        "major": major,
+        "latest": latest,
         "local": any(re.search(rf"^\s+- {re.escape(p)}(=|$)", config.read_text(), re.M) for p in local_packages),
     })
 print(json.dumps(entries))
