@@ -177,7 +177,9 @@ jobs:
         id: pattern
         run: |
           major="${FAMILY%%-*}"
-          if [ "$FAMILY" = "$major" ]; then
+          if [ "$FAMILY" = "runtime-poppler" ]; then
+            echo "regex=^runtime-poppler-[0-9]+\.[0-9]+\.[0-9]+-[0-9]{8}\\.[0-9]+\$" >> "$GITHUB_OUTPUT"
+          elif [ "$FAMILY" = "$major" ]; then
             echo "regex=^${major}\\.[0-9]+-[0-9]{8}\\.[0-9]+\$" >> "$GITHUB_OUTPUT"
           else
             echo "regex=^${major}\\.[0-9]+-dev-[0-9]{8}\\.[0-9]+\$" >> "$GITHUB_OUTPUT"
