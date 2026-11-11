@@ -9,10 +9,9 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 <p>Go 1.26.11 (runtime). Tags: <code>1.26.11-20261110.37</code>, <code>1.26</code>, <code>1.26.11</code>. Index digest <code>sha256:817b16552d42959f4fcf76480c99f78924ce71c1dc310bf89173c1f016435e1b</code>.</p>
 <p><a href="#vulnerabilities">Vulnerabilities</a> · <a href="#sbom">SBOM</a> · <a href="#stig">Hardening profile</a></p>
 <h2 id="vulnerabilities">Vulnerabilities</h2>
-<p>High: 2
+<p>High: 1
  <span class="muted">(Grype)</span></p>
 <table><tr><th>ID</th><th>Severity</th><th>Package</th><th>Installed</th><th>Comes from</th><th>Fixed upstream in</th><th>Architectures</th></tr>
-<tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-119586">CVE-2026-119586</a></td><td class="High">High</td><td><code>sqlite-libs</code></td><td>3.54.1-r0</td><td><code>sqlite-libs 3.54.1-r0</code></td><td>no fix yet</td><td>x86_64, aarch64</td></tr>
 <tr><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-84243">CVE-2026-84243</a></td><td class="High">High</td><td><code>glibc-2.44</code></td><td>2.44-r16</td><td><code>glibc-2.44 2.44-r16</code></td><td>no fix yet</td><td>x86_64, aarch64</td></tr>
 </table>
 <p class="muted">Comes from is the Wolfi package that brings the affected code into the image; a library bundled inside the toolchain, for example, comes from that package. Fixed upstream in is the version of the affected code that fixes it; the image gets the fix when the package it comes from ships that version, and the next build after that publishes it.</p>
