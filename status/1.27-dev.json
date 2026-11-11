@@ -1,8 +1,8 @@
 {
   "family": "1.27-dev",
-  "release": "1.27.4-dev-20261110.37",
+  "release": "1.27.4-dev-20261111.41",
   "go": "1.27.4",
-  "digest": "sha256:864c437da694eaefc817163d4d1065076d9e80359f48978d175c69e30cb758ac",
+  "digest": "sha256:8cff76b52784444e9e9f188a0cd75633f313d1bb3a88ed8f88809c81be7e0c10",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,12 +53,12 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 292250429,
-      "installed": 801911424
+      "compressed": 292251757,
+      "installed": 801911628
     },
     "aarch64": {
-      "compressed": 273448527,
-      "installed": 852898256
+      "compressed": 273429311,
+      "installed": 852898460
     }
   },
   "key_packages": [
