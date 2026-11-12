@@ -1,0 +1,480 @@
+{
+  "family": "1.25",
+  "flavor": "runtime",
+  "image": "ghcr.io/pair-ai-platform/go",
+  "release": "1.25.14-20261112.68",
+  "floating": [
+    "1.25",
+    "1.25.14"
+  ],
+  "digest": "sha256:a9e3043aa1a9c2c7166b4d92e275417d99a776bb740b063cb44f24bcb962f17f",
+  "go": "1.25.14",
+  "first_release": false,
+  "key_packages": [
+    "ca-certificates-bundle 20261020-r0",
+    "git 2.56.1-r0",
+    "glibc-2.44 2.44-r16",
+    "go-1.25-upstream 1.25.14-r0",
+    "openssl-4.0-libcrypto 4.0.3-r8",
+    "openssl-4.0-libssl 4.0.3-r8"
+  ],
+  "packages": {
+    "added": [],
+    "removed": [],
+    "updated": []
+  },
+  "scans": {
+    "x86_64": {
+      "digest": "sha256:7d36e6158530325f6686afd78890b5d209c9c40ec4fbf10e58e4c2281189819f",
+      "sbom": {
+        "packages": 43,
+        "spdx_packages": 199
+      },
+      "size": {
+        "compressed": 81082387,
+        "installed": 232748400
+      },
+      "stig": {
+        "profile": "chainguard-security-guide ssg-chainguard-gpos-ds.xml (DISA GPOS SRG), xccdf_basic_profile_.check",
+        "counts": {
+          "notapplicable": 107,
+          "fail": 6,
+          "pass": 85
+        },
+        "applicable": 91,
+        "score": 93.4,
+        "failed": [
+          {
+            "rule": "SV-203649r971535_rule",
+            "title": "The operating system must use mechanisms meeting the requirements of applicable federal laws, Executive orders, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203739r987791_rule",
+            "title": "The operating system must implement NSA-approved cryptography to protect classified information in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203750r958912_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during preparation for transmission.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203751r958914_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during reception.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203776r959006_rule",
+            "title": "The operating system must implement NIST FIPS-validated cryptography for the following: to provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-263659r982563_rule",
+            "title": "The operating system must include only approved trust anchors in trust stores or certificate stores managed by the organization.",
+            "result": "fail"
+          }
+        ]
+      },
+      "vulnerabilities": {
+        "scanner": "grype",
+        "total": 13,
+        "counts": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 3,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 1
+        },
+        "fixable": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 3,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 1
+        },
+        "findings": [
+          {
+            "id": "GO-2026-6612",
+            "severity": "Critical",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847187"
+          },
+          {
+            "id": "GO-2026-6603",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847185"
+          },
+          {
+            "id": "GO-2026-6605",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847306"
+          },
+          {
+            "id": "GO-2026-6607",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847312"
+          },
+          {
+            "id": "GO-2026-6608",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847307"
+          },
+          {
+            "id": "GO-2026-6610",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/835145"
+          },
+          {
+            "id": "GO-2026-6611",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847186"
+          },
+          {
+            "id": "GO-2026-6613",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847311"
+          },
+          {
+            "id": "GO-2026-6617",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847188"
+          },
+          {
+            "id": "GO-2026-6599",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/839866"
+          },
+          {
+            "id": "GO-2026-6600",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/840925"
+          },
+          {
+            "id": "GO-2026-6809",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.10",
+              "1.27.3"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/851047"
+          },
+          {
+            "id": "GO-2026-6859",
+            "severity": "Unknown",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.11",
+              "1.27.4"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/862185"
+          }
+        ]
+      }
+    },
+    "aarch64": {
+      "digest": "sha256:cdc33f72120c35cbdc3347100785a63360c009ae8a720481d0979dce7808a890",
+      "sbom": {
+        "packages": 43,
+        "spdx_packages": 199
+      },
+      "size": {
+        "compressed": 76327288,
+        "installed": 229429211
+      },
+      "stig": {
+        "profile": "chainguard-security-guide ssg-chainguard-gpos-ds.xml (DISA GPOS SRG), xccdf_basic_profile_.check",
+        "counts": {
+          "notapplicable": 107,
+          "fail": 6,
+          "pass": 85
+        },
+        "applicable": 91,
+        "score": 93.4,
+        "failed": [
+          {
+            "rule": "SV-203649r971535_rule",
+            "title": "The operating system must use mechanisms meeting the requirements of applicable federal laws, Executive orders, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203739r987791_rule",
+            "title": "The operating system must implement NSA-approved cryptography to protect classified information in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203750r958912_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during preparation for transmission.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203751r958914_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during reception.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203776r959006_rule",
+            "title": "The operating system must implement NIST FIPS-validated cryptography for the following: to provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-263659r982563_rule",
+            "title": "The operating system must include only approved trust anchors in trust stores or certificate stores managed by the organization.",
+            "result": "fail"
+          }
+        ]
+      },
+      "vulnerabilities": {
+        "scanner": "grype",
+        "total": 13,
+        "counts": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 3,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 1
+        },
+        "fixable": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 3,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 1
+        },
+        "findings": [
+          {
+            "id": "GO-2026-6612",
+            "severity": "Critical",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847187"
+          },
+          {
+            "id": "GO-2026-6603",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847185"
+          },
+          {
+            "id": "GO-2026-6605",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847306"
+          },
+          {
+            "id": "GO-2026-6607",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847312"
+          },
+          {
+            "id": "GO-2026-6608",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847307"
+          },
+          {
+            "id": "GO-2026-6610",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/835145"
+          },
+          {
+            "id": "GO-2026-6611",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847186"
+          },
+          {
+            "id": "GO-2026-6613",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847311"
+          },
+          {
+            "id": "GO-2026-6617",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847188"
+          },
+          {
+            "id": "GO-2026-6599",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/839866"
+          },
+          {
+            "id": "GO-2026-6600",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/840925"
+          },
+          {
+            "id": "GO-2026-6809",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.10",
+              "1.27.3"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/851047"
+          },
+          {
+            "id": "GO-2026-6859",
+            "severity": "Unknown",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.11",
+              "1.27.4"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/862185"
+          }
+        ]
+      }
+    }
+  }
+}
