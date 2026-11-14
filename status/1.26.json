@@ -1,8 +1,8 @@
 {
   "family": "1.26",
-  "release": "1.26.11-20261114.85",
+  "release": "1.26.11-20261114.86",
   "go": "1.26.11",
-  "digest": "sha256:f30102e2bed83caffd8eda9750432689be8b3235668ff79ac0e58f73ae92c330",
+  "digest": "sha256:98f2eeeac3b7dad1a8148488c1337ed89312eaa9075edee9cd79f26ae9149b25",
   "stig": {
     "x86_64": {
       "counts": {
