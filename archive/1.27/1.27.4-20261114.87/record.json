@@ -1,0 +1,183 @@
+{
+  "family": "1.27",
+  "flavor": "runtime",
+  "image": "ghcr.io/pair-ai-platform/go",
+  "release": "1.27.4-20261114.87",
+  "floating": [
+    "1.27",
+    "1.27.4",
+    "latest"
+  ],
+  "digest": "sha256:50ce32d0b68ee436333ece629a5d372d763a29ada97d8f4750910dfed21e04ac",
+  "go": "1.27.4",
+  "first_release": false,
+  "key_packages": [
+    "ca-certificates-bundle 20261020-r0",
+    "git 2.56.1-r1",
+    "glibc-2.44 2.44-r19",
+    "go-1.27-upstream 1.27.4-r0",
+    "openssl-4.0-libcrypto 4.0.3-r8",
+    "openssl-4.0-libssl 4.0.3-r8"
+  ],
+  "packages": {
+    "added": [],
+    "removed": [],
+    "updated": [
+      [
+        "keyutils-libs",
+        "1.6.3-r41",
+        "1.6.3-r42"
+      ]
+    ]
+  },
+  "scans": {
+    "x86_64": {
+      "digest": "sha256:f0c19ccf1fd5bd62f2aed901e85d0453c4acdb5ba020b94e91e28359440177bd",
+      "sbom": {
+        "packages": 43,
+        "spdx_packages": 199
+      },
+      "size": {
+        "compressed": 91591861,
+        "installed": 267830844
+      },
+      "stig": {
+        "profile": "chainguard-security-guide ssg-chainguard-gpos-ds.xml (DISA GPOS SRG), xccdf_basic_profile_.check",
+        "counts": {
+          "notapplicable": 107,
+          "fail": 6,
+          "pass": 85
+        },
+        "applicable": 91,
+        "score": 93.4,
+        "failed": [
+          {
+            "rule": "SV-203649r971535_rule",
+            "title": "The operating system must use mechanisms meeting the requirements of applicable federal laws, Executive orders, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203739r987791_rule",
+            "title": "The operating system must implement NSA-approved cryptography to protect classified information in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203750r958912_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during preparation for transmission.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203751r958914_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during reception.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203776r959006_rule",
+            "title": "The operating system must implement NIST FIPS-validated cryptography for the following: to provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-263659r982563_rule",
+            "title": "The operating system must include only approved trust anchors in trust stores or certificate stores managed by the organization.",
+            "result": "fail"
+          }
+        ]
+      },
+      "vulnerabilities": {
+        "scanner": "grype",
+        "total": 0,
+        "counts": {
+          "Critical": 0,
+          "High": 0,
+          "Medium": 0,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "fixable": {
+          "Critical": 0,
+          "High": 0,
+          "Medium": 0,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "findings": []
+      }
+    },
+    "aarch64": {
+      "digest": "sha256:d782520ddf003277fcad618fa553f7d73e0b8ade8bde70f1f9c02d6f927a70fe",
+      "sbom": {
+        "packages": 43,
+        "spdx_packages": 199
+      },
+      "size": {
+        "compressed": 85815541,
+        "installed": 262555653
+      },
+      "stig": {
+        "profile": "chainguard-security-guide ssg-chainguard-gpos-ds.xml (DISA GPOS SRG), xccdf_basic_profile_.check",
+        "counts": {
+          "notapplicable": 107,
+          "fail": 6,
+          "pass": 85
+        },
+        "applicable": 91,
+        "score": 93.4,
+        "failed": [
+          {
+            "rule": "SV-203649r971535_rule",
+            "title": "The operating system must use mechanisms meeting the requirements of applicable federal laws, Executive orders, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203739r987791_rule",
+            "title": "The operating system must implement NSA-approved cryptography to protect classified information in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203750r958912_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during preparation for transmission.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203751r958914_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during reception.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203776r959006_rule",
+            "title": "The operating system must implement NIST FIPS-validated cryptography for the following: to provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-263659r982563_rule",
+            "title": "The operating system must include only approved trust anchors in trust stores or certificate stores managed by the organization.",
+            "result": "fail"
+          }
+        ]
+      },
+      "vulnerabilities": {
+        "scanner": "grype",
+        "total": 0,
+        "counts": {
+          "Critical": 0,
+          "High": 0,
+          "Medium": 0,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "fixable": {
+          "Critical": 0,
+          "High": 0,
+          "Medium": 0,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "findings": []
+      }
+    }
+  }
+}

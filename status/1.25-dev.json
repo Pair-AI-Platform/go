@@ -1,8 +1,8 @@
 {
   "family": "1.25-dev",
-  "release": "1.25.14-dev-20261114.85",
+  "release": "1.25.14-dev-20261114.87",
   "go": "1.25.14",
-  "digest": "sha256:d245d3a84803ba916bc3967ad37d54eefa2703f6cea68d6d9bbb95e26b9dde5e",
+  "digest": "sha256:05b48718c1f5ea6c42afc48ec496b5085529d9508358d283c0e9dcafde66211e",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,12 +53,12 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 281733367,
-      "installed": 766855451
+      "compressed": 281734388,
+      "installed": 766904589
     },
     "aarch64": {
-      "compressed": 263953776,
-      "installed": 819778662
+      "compressed": 263966803,
+      "installed": 819827800
     }
   },
   "key_packages": [
@@ -71,7 +71,7 @@
     "go-1.25-upstream 1.25.14-r0",
     "libstdc++ 16.2.0-r3",
     "libstdc++-dev 16.2.0-r3",
-    "make 4.4.1-r15",
+    "make 4.4.1-r16",
     "openssl-4.0-libcrypto 4.0.3-r8",
     "openssl-4.0-libssl 4.0.3-r8"
   ]

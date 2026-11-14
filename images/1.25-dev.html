@@ -5,8 +5,8 @@ table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0}
 th,td{border:1px solid #d0d7de;padding:.35rem .6rem;text-align:left;vertical-align:top}
 th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-weight:600}
 .Medium{color:#9a6700;font-weight:600}.muted{color:#656d76}
-</style></head><body><h1>ghcr.io/pair-ai-platform/go:1.25.14-dev-20261114.85</h1>
-<p>Go 1.25.14 (dev). Tags: <code>1.25.14-dev-20261114.85</code>, <code>1.25-dev</code>, <code>1.25.14-dev</code>. Index digest <code>sha256:d245d3a84803ba916bc3967ad37d54eefa2703f6cea68d6d9bbb95e26b9dde5e</code>.</p>
+</style></head><body><h1>ghcr.io/pair-ai-platform/go:1.25.14-dev-20261114.87</h1>
+<p>Go 1.25.14 (dev). Tags: <code>1.25.14-dev-20261114.87</code>, <code>1.25-dev</code>, <code>1.25.14-dev</code>. Index digest <code>sha256:05b48718c1f5ea6c42afc48ec496b5085529d9508358d283c0e9dcafde66211e</code>.</p>
 <p><a href="#vulnerabilities">Vulnerabilities</a> · <a href="#sbom">SBOM</a> · <a href="#stig">Hardening profile</a></p>
 <h2 id="vulnerabilities">Vulnerabilities</h2>
 <p>Critical: 1 · High: 8 · Medium: 5 · Low: 1 · Unknown: 1
@@ -32,7 +32,7 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 <p class="muted">Comes from is the Wolfi package that brings the affected code into the image; a library bundled inside the toolchain, for example, comes from that package. Fixed upstream in is the version of the affected code that fixes it; the image gets the fix when the package it comes from ships that version, and the next build after that publishes it.</p>
 <h2 id="sbom">SBOM</h2><p>One SPDX SBOM per architecture, also attached to the image as a signed attestation.</p>
 <h3 id="sbom-x86_64">x86_64: 76 packages</h3>
-<p><a href="../sbom/1.25-dev/sbom-x86_64.spdx.json">Download sbom-x86_64.spdx.json</a> · 268.7 MB compressed, 731.3 MB installed</p>
+<p><a href="../sbom/1.25-dev/sbom-x86_64.spdx.json">Download sbom-x86_64.spdx.json</a> · 268.7 MB compressed, 731.4 MB installed</p>
 <table><tr><th>Package</th><th>Version</th><th>License</th></tr>
 <tr><td><code>bash</code></td><td>5.3-r14</td><td>GPL-3.0-or-later</td></tr>
 <tr><td><code>binutils</code></td><td>2.47-r4</td><td>GPL-2.0</td></tr>
@@ -50,7 +50,7 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 <tr><td><code>go-1.25-upstream</code></td><td>1.25.14-r0</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>heimdal-libs</code></td><td>7.8.0-r55</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>isl</code></td><td>0.28-r6</td><td>MIT</td></tr>
-<tr><td><code>keyutils-libs</code></td><td>1.6.3-r41</td><td>GPL-2.0-or-later OR LGPL-2.0-or-later</td></tr>
+<tr><td><code>keyutils-libs</code></td><td>1.6.3-r42</td><td>GPL-2.0-or-later OR LGPL-2.0-or-later</td></tr>
 <tr><td><code>krb5-conf</code></td><td>1.0-r10</td><td>MIT</td></tr>
 <tr><td><code>krb5-libs</code></td><td>1.22.2-r6</td><td>MIT</td></tr>
 <tr><td><code>ld-linux-2.44</code></td><td>2.44-r19</td><td>LGPL-2.1-or-later</td></tr>
@@ -86,7 +86,7 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 <tr><td><code>libzstd1</code></td><td>1.5.7-r13</td><td>BSD-2-Clause AND GPL-2.0-only</td></tr>
 <tr><td><code>linux-headers</code></td><td>7.3.4-r0</td><td>GPL-2.0-only WITH Linux-syscall-note</td></tr>
 <tr><td><code>lmdb</code></td><td>0.9.35-r3</td><td>OLDAP-2.8</td></tr>
-<tr><td><code>make</code></td><td>4.4.1-r15</td><td>GPL-3.0-or-later</td></tr>
+<tr><td><code>make</code></td><td>4.4.1-r16</td><td>GPL-3.0-or-later</td></tr>
 <tr><td><code>mpc</code></td><td>1.4.1-r3</td><td>LGPL-3.0-or-later</td></tr>
 <tr><td><code>mpdecimal</code></td><td>4.0.1-r6</td><td>BSD-2-Clause</td></tr>
 <tr><td><code>mpfr</code></td><td>4.2.2-r5</td><td>LGPL-3.0-or-later</td></tr>
@@ -130,7 +130,7 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 <tr><td><code>go-1.25-upstream</code></td><td>1.25.14-r0</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>heimdal-libs</code></td><td>7.8.0-r55</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>isl</code></td><td>0.28-r6</td><td>MIT</td></tr>
-<tr><td><code>keyutils-libs</code></td><td>1.6.3-r41</td><td>GPL-2.0-or-later OR LGPL-2.0-or-later</td></tr>
+<tr><td><code>keyutils-libs</code></td><td>1.6.3-r42</td><td>GPL-2.0-or-later OR LGPL-2.0-or-later</td></tr>
 <tr><td><code>krb5-conf</code></td><td>1.0-r10</td><td>MIT</td></tr>
 <tr><td><code>krb5-libs</code></td><td>1.22.2-r6</td><td>MIT</td></tr>
 <tr><td><code>ld-linux-2.44</code></td><td>2.44-r19</td><td>LGPL-2.1-or-later</td></tr>
@@ -166,7 +166,7 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 <tr><td><code>libzstd1</code></td><td>1.5.7-r13</td><td>BSD-2-Clause AND GPL-2.0-only</td></tr>
 <tr><td><code>linux-headers</code></td><td>7.3.4-r0</td><td>GPL-2.0-only WITH Linux-syscall-note</td></tr>
 <tr><td><code>lmdb</code></td><td>0.9.35-r3</td><td>OLDAP-2.8</td></tr>
-<tr><td><code>make</code></td><td>4.4.1-r15</td><td>GPL-3.0-or-later</td></tr>
+<tr><td><code>make</code></td><td>4.4.1-r16</td><td>GPL-3.0-or-later</td></tr>
 <tr><td><code>mpc</code></td><td>1.4.1-r3</td><td>LGPL-3.0-or-later</td></tr>
 <tr><td><code>mpdecimal</code></td><td>4.0.1-r6</td><td>BSD-2-Clause</td></tr>
 <tr><td><code>mpfr</code></td><td>4.2.2-r5</td><td>LGPL-3.0-or-later</td></tr>
