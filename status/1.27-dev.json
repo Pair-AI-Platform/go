@@ -1,8 +1,8 @@
 {
   "family": "1.27-dev",
-  "release": "1.27.4-dev-20261114.92",
+  "release": "1.27.4-dev-20261114.95",
   "go": "1.27.4",
-  "digest": "sha256:a09bd7ea05e75b6dd920d64b269b705bc153780047740cd114e1331cb5ad90b0",
+  "digest": "sha256:cda3a8a0689a27dad79e4bf7a07778d38dbb57f1e85d0f53c837553978ceb4ca",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,24 +53,24 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 292288299,
-      "installed": 801978944
+      "compressed": 292288309,
+      "installed": 801987052
     },
     "aarch64": {
-      "compressed": 273464630,
-      "installed": 852954244
+      "compressed": 273464513,
+      "installed": 852954253
     }
   },
   "key_packages": [
     "binutils 2.47-r4",
     "ca-certificates-bundle 20261020-r0",
-    "gcc 16.2.0-r3",
+    "gcc 16.2.0-r4",
     "git 2.56.1-r1",
     "glibc-2.44 2.44-r19",
     "glibc-2.44-dev 2.44-r19",
     "go-1.27-upstream 1.27.4-r0",
-    "libstdc++ 16.2.0-r3",
-    "libstdc++-dev 16.2.0-r3",
+    "libstdc++ 16.2.0-r4",
+    "libstdc++-dev 16.2.0-r4",
     "make 4.4.1-r16",
     "openssl-4.0-libcrypto 4.0.3-r8",
     "openssl-4.0-libssl 4.0.3-r8"
