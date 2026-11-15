@@ -43,9 +43,9 @@ if [ "${FAMILY:-}" = "runtime-poppler" ]; then
     bash -c 'docker cp "$1:/app" - | tar -tv | grep -q "drwxrwxrwx"' -- "$cid"
   docker rm "$cid" >/dev/null
 
-  # Verify distroless properties: no shell, no Go compiler
-  check "no shell in runtime image" \
-    bash -c '! docker run --rm "$1" sh 2>/dev/null' -- "$image"
+  # Shells availability and absence of Go compiler
+  check "sh is available" docker run --rm "$image" sh -c "exit 0"
+  check "bash is available" docker run --rm "$image" bash --version
   check "no Go compiler in runtime image" \
     bash -c '! docker run --rm "$1" go 2>/dev/null' -- "$image"
 

@@ -1,6 +1,6 @@
 # Go static binary runtime image with poppler-utils on Wolfi:
 # Minimal runtime for static Go binaries (CGO_ENABLED=0).
-# Ships poppler-utils (pdfinfo, pdftotext) and CA certificates; no Go toolchain, no shell.
+# Ships poppler-utils (pdfinfo, pdftotext), CA certificates, sh and bash shells; no Go toolchain.
 # Non-root: runs as 1000:1000 by default, and includes uid/gid 10001 (app) for Kubernetes charts.
 contents:
   keyring:
@@ -12,6 +12,8 @@ contents:
     - ca-certificates-bundle
     - tzdata
     - poppler-utils
+    - busybox
+    - bash
 
 accounts:
   groups:
@@ -23,9 +25,11 @@ accounts:
     - username: nonroot
       uid: 1000
       gid: 1000
+      shell: /bin/bash
     - username: app
       uid: 10001
       gid: 10001
+      shell: /bin/bash
   run-as: 1000
 
 paths:
@@ -37,8 +41,7 @@ paths:
 
 work-dir: /app
 
-entrypoint:
-  command: /usr/bin/pdfinfo
+cmd: /bin/sh
 
 environment:
   PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -46,7 +49,7 @@ environment:
 
 annotations:
   org.opencontainers.image.title: Go Runtime with Poppler
-  org.opencontainers.image.description: Minimal, non-root Go runtime container image on Wolfi with poppler-utils (pdfinfo, pdftotext).
+  org.opencontainers.image.description: Minimal, non-root Go runtime container image on Wolfi with poppler-utils (pdfinfo, pdftotext), sh and bash.
   org.opencontainers.image.url: https://github.com/Pair-AI-Platform/go
   org.opencontainers.image.documentation: https://pair-ai-platform.github.io/go/
   org.opencontainers.image.source: https://github.com/Pair-AI-Platform/go
