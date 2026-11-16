@@ -1,8 +1,8 @@
 {
   "family": "1.25",
-  "release": "1.25.14-20261115.127",
+  "release": "1.25.14-20261116.129",
   "go": "1.25.14",
-  "digest": "sha256:925398b2518846b5660745a7f4e8e4fa813d86ff8d42a8f4d7f5dcd6aecaf052",
+  "digest": "sha256:6b3c8b3b892e4d9c14a85bb18a92427575eb8242f16d020d3ae8c2409cfe80d3",
   "stig": {
     "x86_64": {
       "counts": {
@@ -57,7 +57,7 @@
       "installed": 232778198
     },
     "aarch64": {
-      "compressed": 76328173,
+      "compressed": 76328175,
       "installed": 229452637
     }
   },
