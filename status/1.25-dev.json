@@ -1,8 +1,8 @@
 {
   "family": "1.25-dev",
-  "release": "1.25.14-dev-20261116.144",
+  "release": "1.25.14-dev-20261117.149",
   "go": "1.25.14",
-  "digest": "sha256:ee58f344ddd584d1dd7805e177c24b576f4d0c72b4e145084fbab164e199c0ef",
+  "digest": "sha256:f9f01c8528037076bbd26d72eccda9dba160bc2ab9c5898f8bc71afc0b6a2689",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,11 +53,11 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 281792922,
+      "compressed": 281792896,
       "installed": 766923754
     },
     "aarch64": {
-      "compressed": 263970170,
+      "compressed": 263970226,
       "installed": 819857735
     }
   },
@@ -66,8 +66,8 @@
     "ca-certificates-bundle 20261020-r0",
     "gcc 16.2.0-r4",
     "git 2.56.1-r1",
-    "glibc-2.44 2.44-r20",
-    "glibc-2.44-dev 2.44-r20",
+    "glibc-2.44 2.44-r21",
+    "glibc-2.44-dev 2.44-r21",
     "go-1.25-upstream 1.25.14-r0",
     "libstdc++ 16.2.0-r4",
     "libstdc++-dev 16.2.0-r4",
