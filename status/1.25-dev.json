@@ -27,17 +27,17 @@
     "x86_64": {
       "Critical": 1,
       "High": 8,
-      "Medium": 6,
+      "Medium": 9,
       "Low": 1,
-      "Negligible": 0,
+      "Negligible": 1,
       "Unknown": 0
     },
     "aarch64": {
       "Critical": 1,
       "High": 8,
-      "Medium": 6,
+      "Medium": 9,
       "Low": 1,
-      "Negligible": 0,
+      "Negligible": 1,
       "Unknown": 0
     }
   },
@@ -54,7 +54,7 @@
   "size": {
     "x86_64": {
       "compressed": 281816015,
-      "installed": 766924108
+      "installed": 766916043
     },
     "aarch64": {
       "compressed": 263974824,
