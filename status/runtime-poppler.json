@@ -1,8 +1,8 @@
 {
   "family": "runtime-poppler",
-  "release": "runtime-poppler-26.11.0-20261119.193",
+  "release": "runtime-poppler-26.11.0-20261119.195",
   "go": "26.11.0",
-  "digest": "sha256:46d81df2946ba4f39f85fc36bd9d95c9ab5d11a617ae86f9844a766b6c2ce85d",
+  "digest": "sha256:3260c5c3c92f0d812a7d5f75314beedf336ea8c98bbdf142c9afc8dd9a08dd0e",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,11 +53,11 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 28270385,
-      "installed": 70089853
+      "compressed": 28270422,
+      "installed": 70095855
     },
     "aarch64": {
-      "compressed": 26251726,
+      "compressed": 26251786,
       "installed": 73895984
     }
   },
