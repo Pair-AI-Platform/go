@@ -1,8 +1,8 @@
 {
   "family": "1.26",
-  "release": "1.26.11-20261123.250",
+  "release": "1.26.11-20261123.253",
   "go": "1.26.11",
-  "digest": "sha256:5e8a4efaeb0ce483d4ce13b4071247dab88b16f2ae4584330947aa044976f2f0",
+  "digest": "sha256:ea34539cc1300ae4573cb32076471435a40df31213a2bbdceb5da10a1e6c9304",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,16 +53,16 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 88272953,
-      "installed": 258441051
+      "compressed": 88272775,
+      "installed": 258434703
     },
     "aarch64": {
-      "compressed": 82885461,
+      "compressed": 82885276,
       "installed": 253776691
     }
   },
   "key_packages": [
-    "ca-certificates-bundle 20261020-r0",
+    "ca-certificates-bundle 20261020-r1",
     "git 2.56.1-r1",
     "glibc-2.44 2.44-r24",
     "go-1.26-upstream 1.26.11-r0",
