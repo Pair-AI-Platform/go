@@ -1,8 +1,8 @@
 {
   "family": "runtime-poppler",
-  "release": "runtime-poppler-26.11.0-20261124.260",
+  "release": "runtime-poppler-26.11.0-20261124.261",
   "go": "26.11.0",
-  "digest": "sha256:aa39cbe43e38d7693be33e41c2793be47749fc273859e680e16efc8f0b36ff09",
+  "digest": "sha256:8d025865677f5876792a20a1ef329f51d6e1a9f40146365fc461d76d2dec7e09",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,17 +53,17 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 28181049,
-      "installed": 69915547
+      "compressed": 28181088,
+      "installed": 69909545
     },
     "aarch64": {
-      "compressed": 26181806,
+      "compressed": 26181824,
       "installed": 73761395
     }
   },
   "key_packages": [
     "ca-certificates-bundle 20261020-r1",
-    "glibc-2.44 2.44-r24",
+    "glibc-2.44 2.44-r25",
     "libstdc++ 16.2.0-r5",
     "openssl-4.0-libcrypto 4.0.3-r8",
     "poppler 26.11.0-r0",
