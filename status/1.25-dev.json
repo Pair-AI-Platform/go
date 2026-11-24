@@ -1,8 +1,8 @@
 {
   "family": "1.25-dev",
-  "release": "1.25.14-dev-20261124.272",
+  "release": "1.25.14-dev-20261124.275",
   "go": "1.25.14",
-  "digest": "sha256:dcdaabbf924599ce3d0f0a672eef58e4c42bc7f10fd5bc6b33588bfc8994f527",
+  "digest": "sha256:53ec8da164ce14041aa4b333545d1a7b0de8b00a800dc3aeca19b0323fc7ea36",
   "stig": {
     "x86_64": {
       "counts": {
@@ -43,31 +43,32 @@
   },
   "sbom": {
     "x86_64": {
-      "packages": 76,
-      "spdx_packages": 345
+      "packages": 77,
+      "spdx_packages": 348
     },
     "aarch64": {
-      "packages": 76,
-      "spdx_packages": 345
+      "packages": 77,
+      "spdx_packages": 348
     }
   },
   "size": {
     "x86_64": {
-      "compressed": 281710097,
-      "installed": 766759008
+      "compressed": 282721822,
+      "installed": 768970791
     },
     "aarch64": {
-      "compressed": 263978133,
-      "installed": 819712588
+      "compressed": 264992064,
+      "installed": 824207832
     }
   },
   "key_packages": [
     "binutils 2.47-r4",
     "ca-certificates-bundle 20261020-r1",
     "gcc 16.2.0-r5",
-    "git 2.56.1-r1",
+    "git 2.56.1-r2",
     "glibc-2.44 2.44-r25",
     "glibc-2.44-dev 2.44-r25",
+    "glibc-2.44-iconv-common 2.44-r25",
     "go-1.25-upstream 1.25.14-r0",
     "libstdc++ 16.2.0-r5",
     "libstdc++-dev 16.2.0-r5",

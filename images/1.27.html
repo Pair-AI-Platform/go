@@ -5,8 +5,8 @@ table{border-collapse:collapse;width:100%;font-size:.9rem;margin:.5rem 0}
 th,td{border:1px solid #d0d7de;padding:.35rem .6rem;text-align:left;vertical-align:top}
 th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-weight:600}
 .Medium{color:#9a6700;font-weight:600}.muted{color:#656d76}
-</style></head><body><h1>ghcr.io/pair-ai-platform/go:1.27.4-20261124.272</h1>
-<p>Go 1.27.4 (runtime). Tags: <code>1.27.4-20261124.272</code>, <code>1.27</code>, <code>1.27.4</code>, <code>latest</code>. Index digest <code>sha256:35a65a4465a25b5842be0fec86495d38c1d002cf34d5621306919d9bde39486a</code>.</p>
+</style></head><body><h1>ghcr.io/pair-ai-platform/go:1.27.4-20261124.275</h1>
+<p>Go 1.27.4 (runtime). Tags: <code>1.27.4-20261124.275</code>, <code>1.27</code>, <code>1.27.4</code>, <code>latest</code>. Index digest <code>sha256:94d5f4ad5d4e404df33e99d82eb8115d079ba57c22cb1ac23694cdb97585e326</code>.</p>
 <p><a href="#vulnerabilities">Vulnerabilities</a> · <a href="#sbom">SBOM</a> · <a href="#stig">Hardening profile</a></p>
 <h2 id="vulnerabilities">Vulnerabilities</h2>
 <p>Medium: 3 · Low: 1
@@ -19,16 +19,17 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 </table>
 <p class="muted">Comes from is the Wolfi package that brings the affected code into the image; a library bundled inside the toolchain, for example, comes from that package. Fixed upstream in is the version of the affected code that fixes it; the image gets the fix when the package it comes from ships that version, and the next build after that publishes it.</p>
 <h2 id="sbom">SBOM</h2><p>One SPDX SBOM per architecture, also attached to the image as a signed attestation.</p>
-<h3 id="sbom-x86_64">x86_64: 43 packages</h3>
-<p><a href="../sbom/1.27/sbom-x86_64.spdx.json">Download sbom-x86_64.spdx.json</a> · 87.3 MB compressed, 255.5 MB installed</p>
+<h3 id="sbom-x86_64">x86_64: 44 packages</h3>
+<p><a href="../sbom/1.27/sbom-x86_64.spdx.json">Download sbom-x86_64.spdx.json</a> · 88.2 MB compressed, 257.6 MB installed</p>
 <table><tr><th>Package</th><th>Version</th><th>License</th></tr>
 <tr><td><code>bash</code></td><td>5.3-r15</td><td>GPL-3.0-or-later</td></tr>
 <tr><td><code>busybox</code></td><td>1.38.0-r4</td><td>GPL-2.0-only</td></tr>
 <tr><td><code>ca-certificates-bundle</code></td><td>20261020-r1</td><td>MPL-2.0 AND MIT</td></tr>
 <tr><td><code>cyrus-sasl-heimdal-libs</code></td><td>2.1.28-r59</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>gdbm</code></td><td>1.26-r10</td><td>GPL-3.0-or-later</td></tr>
-<tr><td><code>git</code></td><td>2.56.1-r1</td><td>GPL-2.0-or-later AND ( Artistic-1.0-Perl OR GPL-1.0-or-later )</td></tr>
+<tr><td><code>git</code></td><td>2.56.1-r2</td><td>GPL-2.0-or-later AND ( Artistic-1.0-Perl OR GPL-1.0-or-later )</td></tr>
 <tr><td><code>glibc-2.44</code></td><td>2.44-r25</td><td>LGPL-2.1-or-later</td></tr>
+<tr><td><code>glibc-2.44-iconv-common</code></td><td>2.44-r25</td><td>LGPL-2.1-or-later</td></tr>
 <tr><td><code>glibc-2.44-locale-posix</code></td><td>2.44-r25</td><td>LGPL-2.1-or-later</td></tr>
 <tr><td><code>go-1.27-upstream</code></td><td>1.27.4-r0</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>heimdal-libs</code></td><td>7.8.0-r56</td><td>BSD-3-Clause</td></tr>
@@ -66,16 +67,17 @@ th{background:#f6f8fa}code{font-size:.85rem}.Critical,.High{color:#cf222e;font-w
 <tr><td><code>wolfi-baselayout</code></td><td>20230201-r31</td><td>MIT</td></tr>
 <tr><td><code>zlib</code></td><td>1.4-r0</td><td>MPL-2.0 AND MIT</td></tr>
 </table>
-<h3 id="sbom-aarch64">aarch64: 43 packages</h3>
-<p><a href="../sbom/1.27/sbom-aarch64.spdx.json">Download sbom-aarch64.spdx.json</a> · 81.9 MB compressed, 250.4 MB installed</p>
+<h3 id="sbom-aarch64">aarch64: 44 packages</h3>
+<p><a href="../sbom/1.27/sbom-aarch64.spdx.json">Download sbom-aarch64.spdx.json</a> · 82.9 MB compressed, 254.7 MB installed</p>
 <table><tr><th>Package</th><th>Version</th><th>License</th></tr>
 <tr><td><code>bash</code></td><td>5.3-r15</td><td>GPL-3.0-or-later</td></tr>
 <tr><td><code>busybox</code></td><td>1.38.0-r4</td><td>GPL-2.0-only</td></tr>
 <tr><td><code>ca-certificates-bundle</code></td><td>20261020-r1</td><td>MPL-2.0 AND MIT</td></tr>
 <tr><td><code>cyrus-sasl-heimdal-libs</code></td><td>2.1.28-r59</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>gdbm</code></td><td>1.26-r10</td><td>GPL-3.0-or-later</td></tr>
-<tr><td><code>git</code></td><td>2.56.1-r1</td><td>GPL-2.0-or-later AND ( Artistic-1.0-Perl OR GPL-1.0-or-later )</td></tr>
+<tr><td><code>git</code></td><td>2.56.1-r2</td><td>GPL-2.0-or-later AND ( Artistic-1.0-Perl OR GPL-1.0-or-later )</td></tr>
 <tr><td><code>glibc-2.44</code></td><td>2.44-r25</td><td>LGPL-2.1-or-later</td></tr>
+<tr><td><code>glibc-2.44-iconv-common</code></td><td>2.44-r25</td><td>LGPL-2.1-or-later</td></tr>
 <tr><td><code>glibc-2.44-locale-posix</code></td><td>2.44-r25</td><td>LGPL-2.1-or-later</td></tr>
 <tr><td><code>go-1.27-upstream</code></td><td>1.27.4-r0</td><td>BSD-3-Clause</td></tr>
 <tr><td><code>heimdal-libs</code></td><td>7.8.0-r56</td><td>BSD-3-Clause</td></tr>
