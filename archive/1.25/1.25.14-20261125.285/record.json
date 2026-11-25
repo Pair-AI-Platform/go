@@ -1,0 +1,553 @@
+{
+  "family": "1.25",
+  "flavor": "runtime",
+  "image": "ghcr.io/pair-ai-platform/go",
+  "release": "1.25.14-20261125.285",
+  "floating": [
+    "1.25",
+    "1.25.14"
+  ],
+  "digest": "sha256:09c746fc23a129a62a2eb0e236e4e8b8c1c201abce4214df1bd1b1ae53740c38",
+  "go": "1.25.14",
+  "first_release": false,
+  "key_packages": [
+    "ca-certificates-bundle 20261020-r1",
+    "git 2.56.1-r2",
+    "glibc-2.44 2.44-r26",
+    "glibc-2.44-iconv-common 2.44-r26",
+    "go-1.25-upstream 1.25.14-r0",
+    "openssl-4.0-libcrypto 4.0.3-r8",
+    "openssl-4.0-libssl 4.0.3-r8"
+  ],
+  "packages": {
+    "added": [],
+    "removed": [],
+    "updated": []
+  },
+  "scans": {
+    "x86_64": {
+      "digest": "sha256:043cbafff5c4afe941fe8460b6c2914066300b3d4ab909da36a35cbde1f513f9",
+      "sbom": {
+        "packages": 44,
+        "spdx_packages": 202
+      },
+      "size": {
+        "compressed": 81988883,
+        "installed": 235003851
+      },
+      "stig": {
+        "profile": "chainguard-security-guide ssg-chainguard-gpos-ds.xml (DISA GPOS SRG), xccdf_basic_profile_.check",
+        "counts": {
+          "notapplicable": 107,
+          "fail": 6,
+          "pass": 85
+        },
+        "applicable": 91,
+        "score": 93.4,
+        "failed": [
+          {
+            "rule": "SV-203649r971535_rule",
+            "title": "The operating system must use mechanisms meeting the requirements of applicable federal laws, Executive orders, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203739r987791_rule",
+            "title": "The operating system must implement NSA-approved cryptography to protect classified information in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203750r958912_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during preparation for transmission.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203751r958914_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during reception.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203776r959006_rule",
+            "title": "The operating system must implement NIST FIPS-validated cryptography for the following: to provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-263659r982563_rule",
+            "title": "The operating system must include only approved trust anchors in trust stores or certificate stores managed by the organization.",
+            "result": "fail"
+          }
+        ]
+      },
+      "vulnerabilities": {
+        "scanner": "grype",
+        "total": 17,
+        "counts": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 7,
+          "Low": 1,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "fixable": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 4,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "findings": [
+          {
+            "id": "GO-2026-6612",
+            "severity": "Critical",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847187"
+          },
+          {
+            "id": "GO-2026-6603",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847185"
+          },
+          {
+            "id": "GO-2026-6605",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847306"
+          },
+          {
+            "id": "GO-2026-6607",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847312"
+          },
+          {
+            "id": "GO-2026-6608",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847307"
+          },
+          {
+            "id": "GO-2026-6610",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/835145"
+          },
+          {
+            "id": "GO-2026-6611",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847186"
+          },
+          {
+            "id": "GO-2026-6613",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847311"
+          },
+          {
+            "id": "GO-2026-6617",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847188"
+          },
+          {
+            "id": "CVE-2026-115819",
+            "severity": "Medium",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115819"
+          },
+          {
+            "id": "CVE-2026-121758",
+            "severity": "Medium",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121758"
+          },
+          {
+            "id": "CVE-2026-124024",
+            "severity": "Medium",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124024"
+          },
+          {
+            "id": "GO-2026-6599",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/839866"
+          },
+          {
+            "id": "GO-2026-6600",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/840925"
+          },
+          {
+            "id": "GO-2026-6809",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.10",
+              "1.27.3"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/851047"
+          },
+          {
+            "id": "GO-2026-6859",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.11",
+              "1.27.4"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/862185"
+          },
+          {
+            "id": "CVE-2026-100290",
+            "severity": "Low",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100290"
+          }
+        ]
+      }
+    },
+    "aarch64": {
+      "digest": "sha256:bb625c45fd6c87a3847b7320e73cde2b5f9bc8cc5cf180a6c35d9a80eb831be2",
+      "sbom": {
+        "packages": 44,
+        "spdx_packages": 202
+      },
+      "size": {
+        "compressed": 77385121,
+        "installed": 233951707
+      },
+      "stig": {
+        "profile": "chainguard-security-guide ssg-chainguard-gpos-ds.xml (DISA GPOS SRG), xccdf_basic_profile_.check",
+        "counts": {
+          "notapplicable": 107,
+          "fail": 6,
+          "pass": 85
+        },
+        "applicable": 91,
+        "score": 93.4,
+        "failed": [
+          {
+            "rule": "SV-203649r971535_rule",
+            "title": "The operating system must use mechanisms meeting the requirements of applicable federal laws, Executive orders, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203739r987791_rule",
+            "title": "The operating system must implement NSA-approved cryptography to protect classified information in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203750r958912_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during preparation for transmission.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203751r958914_rule",
+            "title": "The operating system must maintain the confidentiality and integrity of information during reception.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-203776r959006_rule",
+            "title": "The operating system must implement NIST FIPS-validated cryptography for the following: to provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.",
+            "result": "fail"
+          },
+          {
+            "rule": "SV-263659r982563_rule",
+            "title": "The operating system must include only approved trust anchors in trust stores or certificate stores managed by the organization.",
+            "result": "fail"
+          }
+        ]
+      },
+      "vulnerabilities": {
+        "scanner": "grype",
+        "total": 17,
+        "counts": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 7,
+          "Low": 1,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "fixable": {
+          "Critical": 1,
+          "High": 8,
+          "Medium": 4,
+          "Low": 0,
+          "Negligible": 0,
+          "Unknown": 0
+        },
+        "findings": [
+          {
+            "id": "GO-2026-6612",
+            "severity": "Critical",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847187"
+          },
+          {
+            "id": "GO-2026-6603",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847185"
+          },
+          {
+            "id": "GO-2026-6605",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847306"
+          },
+          {
+            "id": "GO-2026-6607",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847312"
+          },
+          {
+            "id": "GO-2026-6608",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847307"
+          },
+          {
+            "id": "GO-2026-6610",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/835145"
+          },
+          {
+            "id": "GO-2026-6611",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847186"
+          },
+          {
+            "id": "GO-2026-6613",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847311"
+          },
+          {
+            "id": "GO-2026-6617",
+            "severity": "High",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/847188"
+          },
+          {
+            "id": "CVE-2026-115819",
+            "severity": "Medium",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115819"
+          },
+          {
+            "id": "CVE-2026-121758",
+            "severity": "Medium",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121758"
+          },
+          {
+            "id": "CVE-2026-124024",
+            "severity": "Medium",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124024"
+          },
+          {
+            "id": "GO-2026-6599",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/839866"
+          },
+          {
+            "id": "GO-2026-6600",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.9",
+              "1.27.2"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/840925"
+          },
+          {
+            "id": "GO-2026-6809",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.10",
+              "1.27.3"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/851047"
+          },
+          {
+            "id": "GO-2026-6859",
+            "severity": "Medium",
+            "package": "stdlib",
+            "version": "go1.25.14",
+            "fixed_in": [
+              "1.26.11",
+              "1.27.4"
+            ],
+            "source": "go-1.25-upstream 1.25.14-r0",
+            "url": "https://go.dev/cl/862185"
+          },
+          {
+            "id": "CVE-2026-100290",
+            "severity": "Low",
+            "package": "glibc-2.44",
+            "version": "2.44-r26",
+            "fixed_in": [],
+            "source": "glibc-2.44 2.44-r26",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100290"
+          }
+        ]
+      }
+    }
+  }
+}
