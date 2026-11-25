@@ -1,8 +1,8 @@
 {
   "family": "1.25",
-  "release": "1.25.14-20261125.285",
+  "release": "1.25.14-20261125.292",
   "go": "1.25.14",
-  "digest": "sha256:09c746fc23a129a62a2eb0e236e4e8b8c1c201abce4214df1bd1b1ae53740c38",
+  "digest": "sha256:362d0eb9c8219e4475dd92c890df961e3b0cd4c4770e85f7643ab93113406b1b",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,19 +53,19 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 81988883,
+      "compressed": 81989033,
       "installed": 235010199
     },
     "aarch64": {
-      "compressed": 77385121,
+      "compressed": 77384939,
       "installed": 233951707
     }
   },
   "key_packages": [
     "ca-certificates-bundle 20261020-r1",
     "git 2.56.1-r2",
-    "glibc-2.44 2.44-r26",
-    "glibc-2.44-iconv-common 2.44-r26",
+    "glibc-2.44 2.44-r27",
+    "glibc-2.44-iconv-common 2.44-r27",
     "go-1.25-upstream 1.25.14-r0",
     "openssl-4.0-libcrypto 4.0.3-r8",
     "openssl-4.0-libssl 4.0.3-r8"
