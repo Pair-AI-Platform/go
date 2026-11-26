@@ -1,8 +1,8 @@
 {
   "family": "1.25",
-  "release": "1.25.14-20261126.299",
+  "release": "1.25.14-20261126.301",
   "go": "1.25.14",
-  "digest": "sha256:0bf6eeafdcc61aa51bb5d875f97ffb26333bbba6959313a0d94b1ecc78c36b8b",
+  "digest": "sha256:699af59eb4a0f21e1e263e3bf7f9fa2ac127c40ab3048a62828f4dceb7391d1a",
   "stig": {
     "x86_64": {
       "counts": {
@@ -28,7 +28,7 @@
       "Critical": 1,
       "High": 8,
       "Medium": 7,
-      "Low": 1,
+      "Low": 2,
       "Negligible": 0,
       "Unknown": 0
     },
@@ -36,7 +36,7 @@
       "Critical": 1,
       "High": 8,
       "Medium": 7,
-      "Low": 1,
+      "Low": 2,
       "Negligible": 0,
       "Unknown": 0
     }
@@ -57,7 +57,7 @@
       "installed": 235010199
     },
     "aarch64": {
-      "compressed": 77384946,
+      "compressed": 77384942,
       "installed": 233951707
     }
   },

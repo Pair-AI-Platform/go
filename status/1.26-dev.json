@@ -1,8 +1,8 @@
 {
   "family": "1.26-dev",
-  "release": "1.26.11-dev-20261126.299",
+  "release": "1.26.11-dev-20261126.301",
   "go": "1.26.11",
-  "digest": "sha256:15693084d05f3f382de7a2d0281140c3ffef4d89b7e02a9507f3ac6d055d6eb2",
+  "digest": "sha256:829f1a0f9bc86d519f8f50bcc5ef8e97c1827f045cdcef0700bc90fe2be9ddd4",
   "stig": {
     "x86_64": {
       "counts": {
@@ -28,7 +28,7 @@
       "Critical": 0,
       "High": 0,
       "Medium": 8,
-      "Low": 3,
+      "Low": 4,
       "Negligible": 1,
       "Unknown": 0
     },
@@ -36,7 +36,7 @@
       "Critical": 0,
       "High": 0,
       "Medium": 8,
-      "Low": 3,
+      "Low": 4,
       "Negligible": 1,
       "Unknown": 0
     }
