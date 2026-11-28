@@ -1,8 +1,8 @@
 {
   "family": "1.27-dev",
-  "release": "1.27.4-dev-20261128.323",
+  "release": "1.27.4-dev-20261128.326",
   "go": "1.27.4",
-  "digest": "sha256:96b51fa2160d8d93dd49d2328b03af22d4b700489711beea012320dda44c9a40",
+  "digest": "sha256:65fbe85339f04206cb9ae6d81794e4bac85c419fc19d51be3865ab798be0f04f",
   "stig": {
     "x86_64": {
       "counts": {
@@ -53,11 +53,11 @@
   },
   "size": {
     "x86_64": {
-      "compressed": 293177671,
-      "installed": 804054525
+      "compressed": 293177680,
+      "installed": 804046460
     },
     "aarch64": {
-      "compressed": 274477901,
+      "compressed": 274477926,
       "installed": 857336684
     }
   },
@@ -65,7 +65,7 @@
     "binutils 2.47-r4",
     "ca-certificates-bundle 20261020-r1",
     "gcc 16.2.0-r5",
-    "git 2.56.1-r2",
+    "git 2.56.1-r3",
     "glibc-2.44 2.44-r30",
     "glibc-2.44-dev 2.44-r30",
     "glibc-2.44-iconv-common 2.44-r30",
